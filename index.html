@@ -8,11 +8,11 @@
     <title>Prm_Zero | سایت گیمینگ</title>
 
     <meta name="description"
-        content="سایت رسمی Prm_Zero | آموزش فری فایر، گیم پلی، ترفند و فایل‌های کاربردی">
+        content="سایت رسمی Prm_Zero؛ آموزش فری فایر، گیم پلی، ترفند و فایل‌های کاربردی.">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- لود سریع تصاویر -->
+    <!-- Preload تصاویر برای لود سریع‌تر -->
     <link rel="preload" as="image" href="images/macro-ice.png">
     <link rel="preload" as="image" href="images/sens-new.png">
     <link rel="preload" as="image" href="images/big-smoke.png">
@@ -26,19 +26,27 @@
 
     <div id="loader">
 
-        <div class="loader-text">
-            Prm_Zero
-        </div>
+        <div class="loader-content">
 
-        <div class="loader-bar">
-            <span></span>
+            <div class="loader-logo">
+                Prm_Zero
+            </div>
+
+            <div class="loader-bar">
+                <span></span>
+            </div>
+
+            <div class="loader-percent">
+                در حال بارگذاری...
+            </div>
+
         </div>
 
     </div>
 
 
     <!-- =========================
-         BACKGROUND EFFECTS
+         NEON BACKGROUND
     ========================== -->
 
     <div class="neon-bg"></div>
@@ -49,17 +57,56 @@
 
 
     <!-- =========================
-         MAIN
+         NAVBAR
     ========================== -->
 
-    <main>
+    <nav>
 
-        <!-- HERO -->
+        <div class="container navin">
 
-        <section class="hero">
+            <a class="logo" href="#">
+                Prm_Zero
+            </a>
 
-            <div class="hero-badge">
-                🎮 سایت رسمی گیمینگ
+            <div class="links">
+
+                <a href="#about">
+                    درباره کانال
+                </a>
+
+                <a href="#content">
+                    محتوا
+                </a>
+
+                <a href="#latest">
+                    آخرین ویدیو
+                </a>
+
+                <a href="#files">
+                    فایل‌ها
+                </a>
+
+                <a href="#youtube">
+                    یوتیوب
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="container">
+
+            <div class="avatar">
+                PZ
             </div>
 
             <h1>
@@ -67,48 +114,110 @@
             </h1>
 
             <p>
-                آموزش فری فایر، گیم پلی، ترفند و فایل‌های کاربردی
+                کانال گیمینگ با تمرکز روی فری‌فایر،
+                گیم‌پلی، آموزش و لحظات خفن بازی.
             </p>
 
             <div class="hero-buttons">
 
                 <a
+                    class="btn"
                     href="https://www.youtube.com/@Prm_Zero7"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn primary"
                 >
-                    ▶ ورود به کانال یوتیوب
+                    ▶ مشاهده کانال یوتیوب
                 </a>
 
                 <a
-                    href="https://t.me/Prm_Zero"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn secondary"
+                    class="btn alt"
+                    href="#content"
                 >
-                    📱 کانال تلگرام
+                    دیدن محتوا
                 </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </header>
 
 
-        <!-- =========================
-             CONTENT
-        ========================== -->
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-        <section class="reveal">
+    <section id="about">
 
-            <div class="section-title">
+        <div class="container">
+
+            <div class="title">
 
                 <h2>
-                    🎮 محتوای کانال
+                    درباره Prm_Zero
                 </h2>
 
                 <p>
-                    برای ورود به ویدیو روی هر بخش کلیک کنید
+                    همه‌چیز درباره محتوای کانال
+                </p>
+
+            </div>
+
+
+            <div class="about">
+
+                <div class="card">
+
+                    <h3>
+                        🎮 محتوای گیمینگ
+                    </h3>
+
+                    <p>
+                        ویدیوهای فری‌فایر، گیم‌پلی،
+                        آموزش، تنظیمات و لحظات جذاب بازی؛
+                        با تمرکز روی محتوای سریع و سرگرم‌کننده.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        ⚡ هدف کانال
+                    </h3>
+
+                    <p>
+                        ساخت محتوای خفن و باکیفیت
+                        برای گیمرها و رشد یک کامیونیتی
+                        فعال در کنار شما.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENT
+    ========================== -->
+
+    <section id="content">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>
+                    محتوای کانال
+                </h2>
+
+                <p>
+                    برای ورود به هر بخش روی آن کلیک کنید
                 </p>
 
             </div>
@@ -120,27 +229,23 @@
                 <!-- آموزش و ترفند -->
 
                 <a
+                    class="card stat clickable"
                     href="https://youtu.be/fzntgRMk7EQ?si=eqbExVql4VtOCagC"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="card"
                 >
 
-                    <div class="card-icon">
+                    <strong>
                         🥶
-                    </div>
+                    </strong>
 
-                    <h3>
+                    <span>
                         آموزش و ترفند
-                    </h3>
-
-                    <p>
-                        آموزش‌ها و ترفندهای کاربردی فری فایر
-                    </p>
-
-                    <span class="card-link">
-                        مشاهده ویدیو ←
                     </span>
+
+                    <small>
+                        مشاهده ویدیو ←
+                    </small>
 
                 </a>
 
@@ -148,27 +253,23 @@
                 <!-- لحظات خفن -->
 
                 <a
+                    class="card stat clickable"
                     href="https://youtu.be/ymzibUhKkE4?si=C0mCSUl8MO1FzB34"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="card"
                 >
 
-                    <div class="card-icon">
+                    <strong>
                         🔥
-                    </div>
+                    </strong>
 
-                    <h3>
+                    <span>
                         لحظات خفن
-                    </h3>
-
-                    <p>
-                        بهترین و خفن‌ترین لحظات گیمینگ
-                    </p>
-
-                    <span class="card-link">
-                        مشاهده ویدیو ←
                     </span>
+
+                    <small>
+                        مشاهده ویدیو ←
+                    </small>
 
                 </a>
 
@@ -176,102 +277,105 @@
                 <!-- گیم پلی -->
 
                 <a
+                    class="card stat clickable"
                     href="https://youtu.be/ZvK0fPXgnA0?si=2Nr8scO9JaI3WJju"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="card"
                 >
 
-                    <div class="card-icon">
+                    <strong>
                         🎮
-                    </div>
+                    </strong>
 
-                    <h3>
+                    <span>
                         گیم پلی فری فایر
-                    </h3>
-
-                    <p>
-                        گیم پلی‌های فری فایر و لحظات جذاب
-                    </p>
-
-                    <span class="card-link">
-                        مشاهده ویدیو ←
                     </span>
+
+                    <small>
+                        مشاهده ویدیو ←
+                    </small>
 
                 </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             LATEST VIDEO
-        ========================== -->
+    <!-- =========================
+         LATEST VIDEO
+    ========================== -->
 
-        <section class="reveal">
+    <section id="latest">
 
-            <div class="section-title">
+        <div class="container">
+
+            <div class="title">
 
                 <h2>
                     🔥 آخرین ویدیو
                 </h2>
 
+                <p>
+                    جدیدترین ویدیوی Prm_Zero
+                </p>
+
             </div>
 
 
-            <div class="latest-video">
+            <div class="latest-box">
 
-                <div class="latest-video-content">
+                <div class="latest-icon">
+                    ▶
+                </div>
 
-                    <div class="latest-video-text">
+                <div class="latest-content">
 
-                        <h3>
-                            🎬 آخرین ویدیوی Prm_Zero
-                        </h3>
+                    <h3>
+                        🎬 آخرین ویدیوی Prm_Zero
+                    </h3>
 
-                        <p>
-                            جدیدترین ویدیوی کانال را از دست نده!
-                            برای تماشای ویدیو روی دکمه زیر کلیک کن.
-                        </p>
+                    <p>
+                        جدیدترین ویدیوی کانال را تماشا کن
+                        و نظرت را با ما به اشتراک بگذار.
+                    </p>
 
-
-                        <a
-                            href="https://youtu.be/-hc_wSXc2Sk?si=VLOI0fYwtVrCt7RX"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="watch-btn"
-                        >
-                            ▶ تماشای ویدیو
-                        </a>
-
-                    </div>
-
-                    <div class="video-icon">
-                        ▶️
-                    </div>
+                    <a
+                        class="btn"
+                        href="https://youtu.be/-hc_wSXc2Sk?si=VLOI0fYwtVrCt7RX"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ▶ تماشای ویدیو
+                    </a>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             VIDEOS UNDER CONSTRUCTION
-        ========================== -->
+    <!-- =========================
+         VIDEOS IN PROGRESS
+    ========================== -->
 
-        <section class="reveal">
+    <section id="construction">
 
-            <div class="section-title">
+        <div class="container">
+
+            <div class="title">
 
                 <h2>
                     🚧 ویدیوهای در حال ساخت
                 </h2>
 
                 <p>
-                    ویدیوهای جدید به زودی منتشر می‌شوند
+                    ویدیوهای جدید به‌زودی منتشر می‌شوند
                 </p>
 
             </div>
@@ -297,7 +401,8 @@
                         </h3>
 
                         <p>
-                            ویدیو که قولشو بهتون دادم به زودی ساخته میشه
+                            ویدیو که قولشو بهتون دادم
+                            به زودی ساخته میشه
                             ماکرو یخ سرعتی برای گوشی
                         </p>
 
@@ -323,7 +428,8 @@
                         </h3>
 
                         <p>
-                            قراره به زودی سنس جدید خودمو بهتون بدم
+                            قراره به زودی سنس جدید خودمو
+                            بهتون بدم
                         </p>
 
                     </div>
@@ -348,7 +454,8 @@
                         </h3>
 
                         <p>
-                            قراره به زودی فایل ست بیگ اسموک رو براتون خز کنم
+                            قراره به زودی فایل ست بیگ اسموک
+                            رو براتون خز کنم
                         </p>
 
                     </div>
@@ -357,16 +464,20 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             HEADSHOT SETTINGS
-        ========================== -->
+    <!-- =========================
+         HEADSHOT FILE
+    ========================== -->
 
-        <section class="reveal">
+    <section id="files">
 
-            <div class="section-title">
+        <div class="container">
+
+            <div class="title">
 
                 <h2>
                     🎯 فایل‌های تنظیمات هدشات
@@ -379,9 +490,9 @@
             </div>
 
 
-            <div class="headshot-box">
+            <div class="file-box">
 
-                <div class="headshot-icon">
+                <div class="file-icon">
                     🎯
                 </div>
 
@@ -395,16 +506,14 @@
 
 
                 <!--
-                    فایل داخل GitHub:
-                    File/headshot-settings.rar
+                فایل باید در GitHub دقیقاً در این مسیر باشد:
 
-                    لینک اصلاح‌شده:
-                    raw.githubusercontent.com
+                File/headshot-settings.rar
                 -->
 
                 <a
-                    href="https://raw.githubusercontent.com/prhammwyd47-a11y/Prm_Zero/main/File/headshot-settings.rar"
                     class="download-btn"
+                    href="https://raw.githubusercontent.com/prhammwyd47-a11y/Prm_Zero/main/File/headshot-settings.rar"
                     download="headshot-settings.rar"
                 >
                     ⬇️ دانلود فایل
@@ -412,27 +521,18 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             TELEGRAM
-        ========================== -->
+    <!-- =========================
+         TELEGRAM
+    ========================== -->
 
-        <section class="reveal">
+    <section id="telegram">
 
-            <div class="section-title">
-
-                <h2>
-                    📱 کانال تلگرامی ما
-                </h2>
-
-                <p>
-                    برای دریافت فایل‌ها و اطلاعیه‌های جدید عضو شوید
-                </p>
-
-            </div>
-
+        <div class="container">
 
             <div class="telegram-box">
 
@@ -440,63 +540,64 @@
                     📱
                 </div>
 
-                <h3>
-                    Prm_Zero در تلگرام
-                </h3>
+                <h2>
+                    کانال تلگرامی ما
+                </h2>
 
                 <p>
-                    فایل‌ها، اخبار و اطلاعیه‌های جدید
+                    برای دریافت فایل‌ها و اطلاعیه‌های جدید
+                    عضو کانال تلگرام شو.
                 </p>
 
                 <a
+                    class="btn"
                     href="https://t.me/Prm_Zero"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="telegram-btn"
                 >
                     🚀 ورود به کانال تلگرام
                 </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             YOUTUBE
-        ========================== -->
+    <!-- =========================
+         YOUTUBE CTA
+    ========================== -->
 
-        <section class="reveal">
+    <section id="youtube">
 
-            <div class="section-title">
+        <div class="container">
+
+            <div class="cta">
 
                 <h2>
-                    ▶️ کانال یوتیوب Prm_Zero
+                    عضو خانواده Prm_Zero شو 🔥
                 </h2>
 
                 <p>
-                    تمام ویدیوهای کانال را ببین
+                    برای دیدن ویدیوهای جدید،
+                    وارد کانال یوتیوب شو.
                 </p>
 
-            </div>
-
-
-            <div class="youtube-button-area">
-
                 <a
+                    class="btn"
                     href="https://www.youtube.com/@Prm_Zero7"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn primary"
                 >
-                    🔥 ورود به کانال یوتیوب
+                    ▶ ورود به کانال یوتیوب
                 </a>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
     <!-- =========================
@@ -506,12 +607,7 @@
     <footer>
 
         <p>
-            ساخته شده با ❤️ برای
-            <strong>Prm_Zero</strong>
-        </p>
-
-        <p>
-            © 2026 Prm_Zero
+            © 2026 Prm_Zero — همه حقوق محفوظ است.
         </p>
 
     </footer>
@@ -524,7 +620,7 @@
     <script>
 
         /* =========================
-           LOADING
+           LOADING - 3 SECONDS
         ========================== */
 
         window.addEventListener("load", function () {
@@ -536,22 +632,27 @@
 
                 loader.classList.add("hide");
 
+                setTimeout(function () {
+                    loader.remove();
+                }, 700);
+
             }, 3000);
 
         });
 
 
         /* =========================
-           SCROLL ANIMATION
+           SCROLL REVEAL
         ========================== */
 
-        const revealElements =
-            document.querySelectorAll(".reveal");
+        const elements =
+            document.querySelectorAll(
+                ".card, .construction-card, .latest-box, .file-box, .telegram-box, .cta"
+            );
 
 
         const observer =
             new IntersectionObserver(
-
                 function (entries) {
 
                     entries.forEach(function (entry) {
@@ -560,22 +661,18 @@
 
                             entry.target.classList.add("show");
 
-                            observer.unobserve(entry.target);
-
                         }
 
                     });
 
                 },
-
                 {
                     threshold: 0.12
                 }
-
             );
 
 
-        revealElements.forEach(function (element) {
+        elements.forEach(function (element) {
 
             observer.observe(element);
 
@@ -592,34 +689,23 @@
 
                 const x =
                     event.clientX /
-                    window.innerWidth;
+                    window.innerWidth *
+                    100;
 
                 const y =
                     event.clientY /
-                    window.innerHeight;
+                    window.innerHeight *
+                    100;
 
+                document.documentElement.style.setProperty(
+                    "--mouse-x",
+                    x + "%"
+                );
 
-                const light1 =
-                    document.querySelector(".light-1");
-
-                const light2 =
-                    document.querySelector(".light-2");
-
-
-                if (light1) {
-
-                    light1.style.transform =
-                        `translate(${x * 40}px, ${y * 30}px)`;
-
-                }
-
-
-                if (light2) {
-
-                    light2.style.transform =
-                        `translate(${-x * 40}px, ${y * 30}px)`;
-
-                }
+                document.documentElement.style.setProperty(
+                    "--mouse-y",
+                    y + "%"
+                );
 
             }
         );
