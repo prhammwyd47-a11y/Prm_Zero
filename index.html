@@ -2,18 +2,16 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prm_Zero | Gaming</title>
 
 <style>
 
-/* =========================================
+/* =========================
    RESET
-========================================= */
+========================= */
 
 *{
     margin:0;
@@ -33,9 +31,9 @@ body{
 }
 
 
-/* =========================================
-   LOADING
-========================================= */
+/* =========================
+   LOADER
+========================= */
 
 #loader{
     position:fixed;
@@ -49,7 +47,9 @@ body{
     z-index:999999;
     opacity:1;
     visibility:visible;
-    transition:opacity .7s ease, visibility .7s ease;
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
 }
 
 #loader.hide{
@@ -72,7 +72,8 @@ body{
         0 0 30px #008cff,
         0 0 60px #008cff;
 
-    animation:loaderText 2s ease forwards;
+    animation:
+        loaderText 2s ease forwards;
 }
 
 @keyframes loaderText{
@@ -103,20 +104,26 @@ body{
 }
 
 
-/* =========================================
-   BACKGROUND
-========================================= */
+/* =========================
+   BACKGROUND LIGHTS
+========================= */
 
 body::before{
     content:"";
     position:fixed;
+
     width:600px;
     height:600px;
+
     background:#008cff;
+
     filter:blur(180px);
+
     opacity:.12;
+
     top:-200px;
     right:-150px;
+
     z-index:-2;
 
     animation:
@@ -129,14 +136,21 @@ body::before{
 
 body::after{
     content:"";
+
     position:fixed;
+
     width:500px;
     height:500px;
+
     background:#0055ff;
+
     filter:blur(180px);
+
     opacity:.1;
+
     bottom:-200px;
     left:-150px;
+
     z-index:-2;
 
     animation:
@@ -170,9 +184,9 @@ body::after{
 }
 
 
-/* =========================================
+/* =========================
    NAVBAR
-========================================= */
+========================= */
 
 nav{
     position:fixed;
@@ -193,17 +207,22 @@ nav{
 .nav{
     width:90%;
     max-width:1150px;
+
     margin:auto;
+
     height:70px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
 .logo{
     font-size:25px;
     font-weight:bold;
+
     color:#29a9ff;
 
     text-shadow:
@@ -232,7 +251,7 @@ nav{
 
 .nav-links{
     display:flex;
-    gap:25px;
+    gap:30px;
     list-style:none;
 }
 
@@ -250,20 +269,23 @@ nav{
 }
 
 
-/* =========================================
+/* =========================
    HERO
-========================================= */
+========================= */
 
 .hero{
     min-height:100vh;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
-    padding:100px 20px;
+    padding:
+        100px 20px;
 }
 
 .hero-content{
@@ -286,9 +308,9 @@ nav{
 }
 
 
-/* =========================================
+/* =========================
    AVATAR
-========================================= */
+========================= */
 
 .avatar{
     width:160px;
@@ -299,10 +321,12 @@ nav{
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     font-size:50px;
+
     font-weight:bold;
 
     background:
@@ -317,7 +341,8 @@ nav{
 
     box-shadow:
         0 0 20px #008cff,
-        0 0 60px rgba(0,140,255,.5);
+        0 0 60px
+        rgba(0,140,255,.5);
 
     animation:
         avatarFloat
@@ -338,12 +363,11 @@ nav{
 }
 
 
-/* =========================================
+/* =========================
    HERO TITLE
-========================================= */
+========================= */
 
 .hero h1{
-
     font-size:
         clamp(45px,8vw,85px);
 
@@ -398,14 +422,17 @@ nav{
 .hero p{
     color:#9db4ca;
     font-size:19px;
+
     max-width:650px;
-    margin:15px auto 30px;
+
+    margin:
+        15px auto 30px;
 }
 
 
-/* =========================================
+/* =========================
    BUTTON
-========================================= */
+========================= */
 
 .buttons{
     display:flex;
@@ -417,7 +444,8 @@ nav{
 .btn{
     display:inline-block;
 
-    padding:14px 28px;
+    padding:
+        14px 28px;
 
     border-radius:12px;
 
@@ -437,7 +465,6 @@ nav{
 }
 
 .btn:hover{
-
     transform:
         translateY(-5px)
         scale(1.03);
@@ -448,12 +475,13 @@ nav{
 }
 
 
-/* =========================================
+/* =========================
    SECTIONS
-========================================= */
+========================= */
 
 section{
-    padding:100px 20px;
+    padding:
+        100px 20px;
 }
 
 .container{
@@ -477,12 +505,11 @@ section{
 }
 
 
-/* =========================================
-   CONTENT CARDS
-========================================= */
+/* =========================
+   CARDS
+========================= */
 
 .cards{
-
     display:grid;
 
     grid-template-columns:
@@ -492,7 +519,6 @@ section{
 }
 
 .card{
-
     display:block;
 
     text-decoration:none;
@@ -512,7 +538,8 @@ section{
 
     border-radius:20px;
 
-    padding:35px 25px;
+    padding:
+        35px 25px;
 
     text-align:center;
 
@@ -533,7 +560,6 @@ section{
 }
 
 .card::before{
-
     content:"";
 
     position:absolute;
@@ -554,7 +580,6 @@ section{
 }
 
 .card:hover{
-
     transform:
         translateY(-12px)
         scale(1.02);
@@ -571,9 +596,7 @@ section{
 }
 
 .card-icon{
-
     font-size:45px;
-
     margin-bottom:15px;
 
     animation:
@@ -604,16 +627,15 @@ section{
 }
 
 
-/* =========================================
-   UPCOMING VIDEOS
-========================================= */
+/* =========================
+   UPCOMING
+========================= */
 
 .upcoming{
     padding-top:110px;
 }
 
 .upcoming .section-title h2{
-
     background:
         linear-gradient(
             90deg,
@@ -637,7 +659,6 @@ section{
 }
 
 .upcoming-grid{
-
     display:grid;
 
     grid-template-columns:
@@ -647,7 +668,6 @@ section{
 }
 
 .upcoming-card{
-
     background:
         linear-gradient(
             145deg,
@@ -675,14 +695,11 @@ section{
 }
 
 .upcoming-card.show{
-
     opacity:1;
-
     transform:translateY(0);
 }
 
 .upcoming-card:hover{
-
     transform:translateY(-10px);
 
     border-color:#159fff;
@@ -693,36 +710,21 @@ section{
 }
 
 
-/* =========================================
-   IMAGE AREA
-========================================= */
+/* =========================
+   IMAGES
+========================= */
 
 .upcoming-image{
-
     position:relative;
-
     overflow:hidden;
-
-    width:100%;
 
     aspect-ratio:16 / 9;
 
     background:#06101e;
 }
 
-
-/*
-   مهم:
-   مسیر تصاویر دقیقاً:
-   Images/macro-ice.png
-   Images/sens-new.png
-   Images/big-smoke.png
-*/
-
 .upcoming-image img{
-
     width:100%;
-
     height:100%;
 
     object-fit:cover;
@@ -733,69 +735,29 @@ section{
         transform .6s ease,
         filter .6s ease;
 
-    background:#06101e;
+    content-visibility:auto;
 }
 
 .upcoming-card:hover
 .upcoming-image img{
-
     transform:scale(1.07);
 
     filter:brightness(1.08);
 }
 
 
-/* =========================================
-   IMAGE ERROR
-========================================= */
-
-.image-error{
-
-    position:absolute;
-
-    inset:0;
-
-    display:none;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-direction:column;
-
-    gap:10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #07182b,
-            #030914
-        );
-
-    color:#6f8da8;
-
-    text-align:center;
-
-    padding:20px;
-}
-
-.image-error strong{
-    color:#42baff;
-}
-
-
-/* =========================================
+/* =========================
    STATUS
-========================================= */
+========================= */
 
 .status{
-
     position:absolute;
 
     top:15px;
     right:15px;
 
-    padding:8px 14px;
+    padding:
+        8px 14px;
 
     border-radius:30px;
 
@@ -820,12 +782,11 @@ section{
 }
 
 
-/* =========================================
+/* =========================
    UPCOMING TEXT
-========================================= */
+========================= */
 
 .upcoming-content{
-
     padding:
         22px 20px 25px;
 
@@ -833,16 +794,11 @@ section{
 }
 
 .upcoming-content h3{
-
     font-size:22px;
-
     margin-bottom:13px;
-
-    color:white;
 }
 
 .upcoming-content p{
-
     color:#9bb0c3;
 
     line-height:2;
@@ -851,9 +807,7 @@ section{
 }
 
 .upcoming-line{
-
     width:50px;
-
     height:3px;
 
     margin:
@@ -870,234 +824,187 @@ section{
         );
 
     box-shadow:
-        0 0 12px
-        #008cff;
+        0 0 12px #008cff;
 }
 
 
-/* =========================================
-   HEADSHOT
-========================================= */
+/* =========================
+   HEADSHOT FILE SECTION
+========================= */
 
-.headshot-section{
-    padding-top:70px;
+.files-section{
+    padding-top:100px;
 }
 
-.headshot-card{
-
-    max-width:650px;
+.file-card{
+    max-width:750px;
 
     margin:auto;
 
-    padding:45px 30px;
+    padding:
+        45px 30px;
 
     text-align:center;
+
+    border-radius:25px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(10,30,52,.95),
-            rgba(3,12,23,.95)
+            rgba(10,30,53,.95),
+            rgba(3,13,25,.95)
         );
 
     border:
         1px solid
-        rgba(30,145,230,.3);
-
-    border-radius:25px;
+        rgba(20,155,255,.3);
 
     box-shadow:
-        0 15px 50px
-        rgba(0,100,255,.12);
+        0 15px 60px
+        rgba(0,120,255,.12);
+
+    position:relative;
+
+    overflow:hidden;
 
     transition:.4s;
-
-    opacity:0;
-
-    transform:translateY(50px);
 }
 
-.headshot-card.show{
+.file-card::before{
+    content:"";
 
-    opacity:1;
+    position:absolute;
 
-    transform:translateY(0);
+    width:220px;
+    height:220px;
+
+    background:#008cff;
+
+    filter:blur(100px);
+
+    opacity:.12;
+
+    top:-100px;
+    right:-80px;
+
+    pointer-events:none;
 }
 
-.headshot-card:hover{
-
+.file-card:hover{
     transform:translateY(-8px);
 
     border-color:#159fff;
 
     box-shadow:
-        0 20px 60px
-        rgba(0,140,255,.25);
+        0 20px 70px
+        rgba(0,140,255,.2);
 }
 
-.headshot-icon{
+.file-icon{
+    font-size:65px;
 
-    font-size:60px;
-
-    margin-bottom:15px;
+    margin-bottom:20px;
 
     filter:
         drop-shadow(
             0 0 15px
-            #008cff
+            rgba(0,150,255,.6)
         );
 
     animation:
-        iconFloat
+        fileFloat
         3s
         infinite
         ease-in-out;
 }
 
-.headshot-card h3{
-    font-size:27px;
-    margin-bottom:12px;
+@keyframes fileFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
 }
 
-.headshot-card p{
+.file-card h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
 
-    color:#8da5bb;
-
-    margin-bottom:25px;
+.file-card p{
+    color:#91a9be;
 
     line-height:2;
+
+    margin-bottom:25px;
 }
 
 .download-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:
+        15px 35px;
+
+    border-radius:14px;
 
     background:
         linear-gradient(
             135deg,
             #008cff,
-            #0055ff
+            #0062ff
         );
 
-    border:
-        1px solid
-        rgba(80,190,255,.5);
-}
+    color:#fff;
 
+    text-decoration:none;
 
-/* =========================================
-   TELEGRAM
-========================================= */
+    font-weight:bold;
 
-.telegram-section{
-    padding-top:50px;
-}
+    font-size:17px;
 
-.telegram-card{
-
-    max-width:650px;
-
-    margin:auto;
-
-    padding:45px 30px;
-
-    text-align:center;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(8,32,55,.95),
-            rgba(3,12,23,.95)
-        );
-
-    border:
-        1px solid
-        rgba(0,170,255,.3);
-
-    border-radius:25px;
-
-    transition:.4s;
-
-    opacity:0;
-
-    transform:translateY(50px);
+    transition:.3s;
 
     box-shadow:
-        0 15px 50px
-        rgba(0,120,255,.1);
+        0 0 20px
+        rgba(0,140,255,.3);
 }
 
-.telegram-card.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-}
-
-.telegram-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#159fff;
+.download-btn:hover{
+    transform:
+        translateY(-5px)
+        scale(1.04);
 
     box-shadow:
-        0 20px 60px
-        rgba(0,140,255,.25);
+        0 10px 40px
+        rgba(0,140,255,.5);
 }
 
-.telegram-icon{
+.file-name{
+    margin-top:18px;
 
-    font-size:60px;
+    font-size:13px;
 
-    margin-bottom:15px;
-
-    filter:
-        drop-shadow(
-            0 0 15px
-            #008cff
-        );
-
-    animation:
-        iconFloat
-        3s
-        infinite
-        ease-in-out;
-}
-
-.telegram-card h3{
-
-    font-size:27px;
-
-    margin-bottom:12px;
-}
-
-.telegram-card p{
-
-    color:#8da5bb;
-
-    line-height:2;
-
-    margin-bottom:25px;
-}
-
-.telegram-btn{
-
-    background:
-        linear-gradient(
-            135deg,
-            #008cff,
-            #0072d8
-        );
+    color:#5f7b92;
 }
 
 
-/* =========================================
-   YOUTUBE
-========================================= */
+/* =========================
+   YOUTUBE CTA
+========================= */
 
 .cta{
-
     text-align:center;
 
-    padding:70px 20px;
+    padding:
+        70px 20px;
 
     border-radius:25px;
 
@@ -1117,26 +1024,21 @@ section{
 }
 
 .cta h2{
-
     font-size:35px;
-
     margin-bottom:10px;
 }
 
 .cta p{
-
     color:#8ea7be;
-
     margin-bottom:20px;
 }
 
 
-/* =========================================
+/* =========================
    FOOTER
-========================================= */
+========================= */
 
 footer{
-
     padding:30px;
 
     text-align:center;
@@ -1148,12 +1050,11 @@ footer{
 }
 
 
-/* =========================================
+/* =========================
    PARTICLES
-========================================= */
+========================= */
 
 .particle{
-
     position:fixed;
 
     width:4px;
@@ -1185,9 +1086,9 @@ footer{
 }
 
 
-/* =========================================
+/* =========================
    MOBILE
-========================================= */
+========================= */
 
 @media(max-width:800px){
 
@@ -1225,24 +1126,27 @@ footer{
         font-size:20px;
     }
 
-    .headshot-card,
-    .telegram-card{
-        padding:35px 20px;
+    .file-card{
+        padding:
+            35px 20px;
+    }
+
+    .file-card h3{
+        font-size:25px;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================
-     LOADER
-========================================= -->
+<!-- =========================
+     LOADING
+========================= -->
 
 <div id="loader">
 
@@ -1253,9 +1157,9 @@ footer{
 </div>
 
 
-<!-- =========================================
+<!-- =========================
      NAVBAR
-========================================= -->
+========================= -->
 
 <nav>
 
@@ -1280,14 +1184,8 @@ Prm_Zero
 </li>
 
 <li>
-<a href="#headshot">
-فایل هدشات
-</a>
-</li>
-
-<li>
-<a href="#telegram">
-کانال تلگرام
+<a href="#files">
+فایل‌های هدشات
 </a>
 </li>
 
@@ -1304,9 +1202,9 @@ Prm_Zero
 </nav>
 
 
-<!-- =========================================
+<!-- =========================
      HERO
-========================================= -->
+========================= -->
 
 <header class="hero">
 
@@ -1344,9 +1242,9 @@ rel="noopener noreferrer">
 </header>
 
 
-<!-- =========================================
+<!-- =========================
      CONTENT
-========================================= -->
+========================= -->
 
 <section id="about">
 
@@ -1367,6 +1265,8 @@ rel="noopener noreferrer">
 
 <div class="cards">
 
+
+<!-- GAMEPLAY -->
 
 <a
 href="https://youtu.be/ZvK0fPXgnA0?si=2Nr8scO9JaI3WJju"
@@ -1389,6 +1289,8 @@ class="card">
 </a>
 
 
+<!-- TUTORIAL -->
+
 <a
 href="https://youtu.be/fzntgRMk7EQ?si=eqbExVql4VtOCagC"
 target="_blank"
@@ -1409,6 +1311,8 @@ class="card">
 
 </a>
 
+
+<!-- COOL MOMENTS -->
 
 <a
 href="https://youtu.be/ymzibUhKkE4?si=C0mCSUl8MO1FzB34"
@@ -1431,6 +1335,27 @@ class="card">
 </a>
 
 
+<!-- HEADSHOT FILES -->
+
+<a
+href="#files"
+class="card">
+
+<div class="card-icon">
+📁
+</div>
+
+<h3>
+فایل‌های تنظیمات هدشات
+</h3>
+
+<p>
+فایل تنظیمات هدشات را دریافت کن
+</p>
+
+</a>
+
+
 </div>
 
 </div>
@@ -1438,9 +1363,9 @@ class="card">
 </section>
 
 
-<!-- =========================================
+<!-- =========================
      UPCOMING VIDEOS
-========================================= -->
+========================= -->
 
 <section
 id="upcoming"
@@ -1464,35 +1389,19 @@ class="upcoming">
 <div class="upcoming-grid">
 
 
-<!-- =========================================
-     MACRO ICE
-========================================= -->
+<!-- MACRO ICE -->
 
 <div class="upcoming-card">
 
 <div class="upcoming-image">
 
 <img
-src="Images/macro-ice.png"
+src="images/macro-ice.png"
 alt="آموزش ماکرو یخ برای گوشی"
 width="1280"
 height="720"
-loading="eager"
-decoding="async"
 fetchpriority="high"
-onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-<div class="image-error">
-
-<strong>
-تصویر پیدا نشد
-</strong>
-
-<span>
-Images/macro-ice.png
-</span>
-
-</div>
+decoding="async">
 
 <div class="status">
 🚧 در حال ساخت
@@ -1508,7 +1417,6 @@ Images/macro-ice.png
 
 <p>
 ویدیو که قولشو بهتون دادم به زودی ساخته میشه
-<br>
 ماکرو یخ سرعتی برای گوشی
 </p>
 
@@ -1519,35 +1427,19 @@ Images/macro-ice.png
 </div>
 
 
-<!-- =========================================
-     NEW SENS
-========================================= -->
+<!-- NEW SENS -->
 
 <div class="upcoming-card">
 
 <div class="upcoming-image">
 
 <img
-src="Images/sens-new.png"
+src="images/sens-new.png"
 alt="تامنیل سنس جدید"
 width="1280"
 height="720"
-loading="eager"
-decoding="async"
-fetchpriority="high"
-onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-<div class="image-error">
-
-<strong>
-تصویر پیدا نشد
-</strong>
-
-<span>
-Images/sens-new.png
-</span>
-
-</div>
+loading="lazy"
+decoding="async">
 
 <div class="status">
 🚧 در حال ساخت
@@ -1572,35 +1464,19 @@ Images/sens-new.png
 </div>
 
 
-<!-- =========================================
-     BIG SMOKE
-========================================= -->
+<!-- BIG SMOKE -->
 
 <div class="upcoming-card">
 
 <div class="upcoming-image">
 
 <img
-src="Images/big-smoke.png"
+src="images/big-smoke.png"
 alt="تامنیل فایل ست بیگ اسموک"
 width="1280"
 height="720"
-loading="eager"
-decoding="async"
-fetchpriority="high"
-onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-<div class="image-error">
-
-<strong>
-تصویر پیدا نشد
-</strong>
-
-<span>
-Images/big-smoke.png
-</span>
-
-</div>
+loading="lazy"
+decoding="async">
 
 <div class="status">
 🚧 در حال ساخت
@@ -1615,7 +1491,7 @@ Images/big-smoke.png
 </h3>
 
 <p>
-قراره به زودی فایل ست بیگ اسموک رو براتون بذارم
+قراره به زودی فایل ست بیگ اسموک رو براتون خز کنم
 </p>
 
 <div class="upcoming-line"></div>
@@ -1632,20 +1508,20 @@ Images/big-smoke.png
 </section>
 
 
-<!-- =========================================
-     HEADSHOT SETTINGS
-========================================= -->
+<!-- =========================
+     HEADSHOT FILES
+========================= -->
 
 <section
-id="headshot"
-class="headshot-section">
+id="files"
+class="files-section">
 
 <div class="container">
 
 <div class="section-title">
 
 <h2>
-🎯 فایل تنظیمات هدشات
+📁 فایل‌های تنظیمات هدشات
 </h2>
 
 <p>
@@ -1655,29 +1531,40 @@ class="headshot-section">
 </div>
 
 
-<div class="headshot-card">
+<div class="file-card">
 
-<div class="headshot-icon">
+
+<div class="file-icon">
 🎯
 </div>
 
+
 <h3>
-Headshot Settings
+فایل تنظیمات هدشات
 </h3>
 
+
 <p>
-فایل تنظیمات هدشات برای فری‌فایر
+فایل تنظیمات هدشات را از لینک زیر دریافت کن
+و برای تنظیمات بازی استفاده کن.
 </p>
 
+
 <a
-class="btn download-btn"
-href="./File/headshot-settings.rar"
-download="headshot-settings.rar">
+class="download-btn"
+href="files/headshot-settings.rar"
+download>
 
 ⬇️ دانلود فایل
 
 </a>
 
+
+<div class="file-name">
+📦 headshot-settings.rar
+</div>
+
+
 </div>
 
 </div>
@@ -1685,66 +1572,9 @@ download="headshot-settings.rar">
 </section>
 
 
-<!-- =========================================
-     TELEGRAM
-========================================= -->
-
-<section
-id="telegram"
-class="telegram-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-📱 کانال تلگرامی ما
-</h2>
-
-<p>
-برای دریافت جدیدترین فایل‌ها و اخبار عضو کانال تلگرام شو
-</p>
-
-</div>
-
-
-<a
-href="https://t.me/Prm_Zero"
-target="_blank"
-rel="noopener noreferrer"
-style="text-decoration:none;color:white;">
-
-<div class="telegram-card">
-
-<div class="telegram-icon">
-📱
-</div>
-
-<h3>
-کانال تلگرامی ما
-</h3>
-
-<p>
-برای ورود به کانال تلگرام Prm_Zero
-روی این بخش کلیک کن
-</p>
-
-<span class="btn telegram-btn">
-🚀 ورود به کانال تلگرام
-</span>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- =========================================
+<!-- =========================
      YOUTUBE
-========================================= -->
+========================= -->
 
 <section id="youtube">
 
@@ -1777,9 +1607,9 @@ rel="noopener noreferrer">
 </section>
 
 
-<!-- =========================================
+<!-- =========================
      FOOTER
-========================================= -->
+========================= -->
 
 <footer>
 
@@ -1790,9 +1620,9 @@ rel="noopener noreferrer">
 
 <script>
 
-/* =========================================
-   LOADING
-========================================= */
+/* =========================
+   LOADING - 3 SECONDS
+========================= */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -1814,14 +1644,15 @@ document.addEventListener(
 );
 
 
-/* =========================================
+/* =========================
    SCROLL ANIMATION
-========================================= */
+========================= */
 
-const animatedElements =
-document.querySelectorAll(
-    ".card, .upcoming-card, .headshot-card, .telegram-card"
-);
+const cards =
+document.querySelectorAll(".card");
+
+const upcomingCards =
+document.querySelectorAll(".upcoming-card");
 
 
 const observer =
@@ -1846,23 +1677,26 @@ new IntersectionObserver(
 },
 
 {
-    threshold:.05,
+    threshold:.08,
 
     rootMargin:
-        "0px 0px 200px 0px"
+        "0px 0px 150px 0px"
 });
 
 
-animatedElements.forEach(element=>{
-
-    observer.observe(element);
-
+cards.forEach(card=>{
+    observer.observe(card);
 });
 
 
-/* =========================================
+upcomingCards.forEach(card=>{
+    observer.observe(card);
+});
+
+
+/* =========================
    PARTICLES
-========================================= */
+========================= */
 
 for(let i=0;i<25;i++){
 
@@ -1892,7 +1726,5 @@ for(let i=0;i<25;i++){
 
 </script>
 
-
 </body>
-
 </html>
