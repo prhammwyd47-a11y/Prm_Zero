@@ -5,17 +5,15 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prm_Zero | Gaming</title>
 
-
 <style>
 
-/* ==================================================
+/* =========================================
    RESET
-================================================== */
+========================================= */
 
 *{
     margin:0;
@@ -29,28 +27,25 @@ html{
 
 body{
     background:#030914;
-    color:white;
+    color:#fff;
     font-family:Tahoma,Arial,sans-serif;
     overflow-x:hidden;
 }
 
 
-/* ==================================================
+/* =========================================
    LOADING SCREEN
-================================================== */
+========================================= */
 
 #loader{
 
     position:fixed;
-
     inset:0;
 
     background:#030914;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     z-index:99999;
@@ -60,15 +55,13 @@ body{
         visibility 1s ease;
 }
 
-
 .loader-logo{
 
-    font-size:
-    clamp(45px,8vw,85px);
+    font-size:clamp(45px,8vw,85px);
 
     font-weight:bold;
 
-    color:white;
+    color:#fff;
 
     opacity:0;
 
@@ -82,55 +75,35 @@ body{
         0 0 60px #008cff;
 
     animation:
-        loaderText 2.5s
-        ease forwards;
+        loaderText 2.5s ease forwards;
 }
-
 
 @keyframes loaderText{
 
     0%{
-
         opacity:0;
-
         transform:scale(.7);
-
         filter:blur(12px);
-
     }
 
     40%{
-
         opacity:.4;
-
         transform:scale(.9);
-
         filter:blur(5px);
-
     }
 
     75%{
-
         opacity:1;
-
         transform:scale(1);
-
         filter:blur(0);
-
     }
 
     100%{
-
         opacity:1;
-
         transform:scale(1);
-
         filter:blur(0);
-
     }
-
 }
-
 
 #loader.hide{
 
@@ -139,13 +112,12 @@ body{
     visibility:hidden;
 
     pointer-events:none;
-
 }
 
 
-/* ==================================================
-   BACKGROUND LIGHT
-================================================== */
+/* =========================================
+   BACKGROUND LIGHTS
+========================================= */
 
 body::before{
 
@@ -154,7 +126,6 @@ body::before{
     position:fixed;
 
     width:600px;
-
     height:600px;
 
     background:#008cff;
@@ -164,7 +135,6 @@ body::before{
     opacity:.12;
 
     top:-200px;
-
     right:-150px;
 
     z-index:-2;
@@ -174,9 +144,7 @@ body::before{
         infinite
         alternate
         ease-in-out;
-
 }
-
 
 body::after{
 
@@ -185,7 +153,6 @@ body::after{
     position:fixed;
 
     width:500px;
-
     height:500px;
 
     background:#0055ff;
@@ -195,7 +162,6 @@ body::after{
     opacity:.1;
 
     bottom:-200px;
-
     left:-150px;
 
     z-index:-2;
@@ -205,51 +171,34 @@ body::after{
         infinite
         alternate
         ease-in-out;
-
 }
-
 
 @keyframes moveLight{
 
     from{
-
-        transform:
-        translate(0,0);
-
+        transform:translate(0,0);
     }
 
     to{
-
-        transform:
-        translate(-150px,150px);
-
+        transform:translate(-150px,150px);
     }
-
 }
-
 
 @keyframes moveLight2{
 
     from{
-
-        transform:
-        translate(0,0);
-
+        transform:translate(0,0);
     }
 
     to{
-
-        transform:
-        translate(150px,-100px);
-
+        transform:translate(150px,-100px);
     }
-
 }
 
 
-/* ==================================================
+/* =========================================
    NAVBAR
-================================================== */
+========================================= */
 
 nav{
 
@@ -264,15 +213,12 @@ nav{
     background:
         rgba(3,9,20,.65);
 
-    backdrop-filter:
-        blur(15px);
+    backdrop-filter:blur(15px);
 
     border-bottom:
         1px solid
         rgba(0,153,255,.15);
-
 }
-
 
 .nav{
 
@@ -289,9 +235,7 @@ nav{
     align-items:center;
 
     justify-content:space-between;
-
 }
-
 
 .logo{
 
@@ -309,29 +253,21 @@ nav{
         logoGlow 2s
         infinite
         alternate;
-
 }
-
 
 @keyframes logoGlow{
 
     from{
-
         text-shadow:
             0 0 8px #008cff;
-
     }
 
     to{
-
         text-shadow:
             0 0 10px #008cff,
             0 0 30px #008cff;
-
     }
-
 }
-
 
 .nav-links{
 
@@ -340,9 +276,7 @@ nav{
     gap:30px;
 
     list-style:none;
-
 }
-
 
 .nav-links a{
 
@@ -351,9 +285,7 @@ nav{
     text-decoration:none;
 
     transition:.3s;
-
 }
-
 
 .nav-links a:hover{
 
@@ -361,13 +293,12 @@ nav{
 
     text-shadow:
         0 0 10px #008cff;
-
 }
 
 
-/* ==================================================
+/* =========================================
    HERO
-================================================== */
+========================================= */
 
 .hero{
 
@@ -381,52 +312,36 @@ nav{
 
     text-align:center;
 
-    padding:
-        100px 20px;
-
+    padding:100px 20px;
 }
-
 
 .hero-content{
 
     animation:
-        heroEnter 1.2s
-        ease forwards;
-
+        heroEnter 1.2s ease forwards;
 }
-
 
 @keyframes heroEnter{
 
     from{
-
         opacity:0;
-
-        transform:
-            translateY(50px);
-
+        transform:translateY(50px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
-
 }
 
 
-/* ==================================================
+/* =========================================
    AVATAR
-================================================== */
+========================================= */
 
 .avatar{
 
     width:160px;
-
     height:160px;
 
     margin:auto;
@@ -436,7 +351,6 @@ nav{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     font-size:50px;
@@ -462,32 +376,23 @@ nav{
         avatarFloat 3s
         ease-in-out
         infinite;
-
 }
-
 
 @keyframes avatarFloat{
 
     0%,100%{
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-            translateY(-15px);
-
+        transform:translateY(-15px);
     }
-
 }
 
 
-/* ==================================================
+/* =========================================
    HERO TITLE
-================================================== */
+========================================= */
 
 .hero h1{
 
@@ -499,62 +404,41 @@ nav{
     background:
         linear-gradient(
             90deg,
-            #ffffff,
+            #fff,
             #36b5ff,
-            #ffffff
+            #fff
         );
 
-    background-size:
-        200% auto;
+    background-size:200% auto;
 
-    -webkit-background-clip:
-        text;
+    -webkit-background-clip:text;
 
     color:transparent;
 
     animation:
-        gradientMove 3s
-        linear infinite,
-
-        titleEnter 1s
-        ease;
-
+        gradientMove 3s linear infinite,
+        titleEnter 1s ease;
 }
-
 
 @keyframes gradientMove{
 
     to{
-
-        background-position:
-            200% center;
-
+        background-position:200% center;
     }
-
 }
-
 
 @keyframes titleEnter{
 
     from{
-
         opacity:0;
-
         letter-spacing:20px;
-
     }
 
     to{
-
         opacity:1;
-
-        letter-spacing:
-            normal;
-
+        letter-spacing:normal;
     }
-
 }
-
 
 .hero p{
 
@@ -566,13 +450,12 @@ nav{
 
     margin:
         15px auto 30px;
-
 }
 
 
-/* ==================================================
+/* =========================================
    BUTTON
-================================================== */
+========================================= */
 
 .buttons{
 
@@ -583,16 +466,13 @@ nav{
     flex-wrap:wrap;
 
     gap:12px;
-
 }
-
 
 .btn{
 
     display:inline-block;
 
-    padding:
-        14px 28px;
+    padding:14px 28px;
 
     border-radius:12px;
 
@@ -609,9 +489,7 @@ nav{
     box-shadow:
         0 0 15px
         rgba(0,150,255,.3);
-
 }
-
 
 .btn:hover{
 
@@ -622,21 +500,17 @@ nav{
     box-shadow:
         0 10px 35px
         rgba(0,153,255,.5);
-
 }
 
 
-/* ==================================================
+/* =========================================
    SECTIONS
-================================================== */
+========================================= */
 
 section{
 
-    padding:
-        100px 20px;
-
+    padding:100px 20px;
 }
-
 
 .container{
 
@@ -645,38 +519,31 @@ section{
     max-width:1100px;
 
     margin:auto;
-
 }
-
 
 .section-title{
 
     text-align:center;
 
     margin-bottom:50px;
-
 }
-
 
 .section-title h2{
 
     font-size:38px;
 
     margin-bottom:10px;
-
 }
-
 
 .section-title p{
 
     color:#8097ad;
-
 }
 
 
-/* ==================================================
-   CARDS
-================================================== */
+/* =========================================
+   CONTENT CARDS
+========================================= */
 
 .cards{
 
@@ -686,9 +553,7 @@ section{
         repeat(3,1fr);
 
     gap:22px;
-
 }
-
 
 .card{
 
@@ -711,8 +576,7 @@ section{
 
     border-radius:20px;
 
-    padding:
-        35px 25px;
+    padding:35px 25px;
 
     text-align:center;
 
@@ -726,9 +590,7 @@ section{
 
     transform:
         translateY(40px);
-
 }
-
 
 .card.show{
 
@@ -736,9 +598,7 @@ section{
 
     transform:
         translateY(0);
-
 }
-
 
 .card::before{
 
@@ -747,7 +607,6 @@ section{
     position:absolute;
 
     width:100px;
-
     height:100px;
 
     background:#009cff;
@@ -757,13 +616,10 @@ section{
     opacity:.15;
 
     top:-30px;
-
     right:-30px;
 
     transition:.4s;
-
 }
-
 
 .card:hover{
 
@@ -776,16 +632,12 @@ section{
     box-shadow:
         0 15px 50px
         rgba(0,140,255,.25);
-
 }
-
 
 .card:hover::before{
 
     opacity:.35;
-
 }
-
 
 .card-icon{
 
@@ -797,48 +649,258 @@ section{
         iconFloat 3s
         infinite
         ease-in-out;
-
 }
-
 
 @keyframes iconFloat{
 
     0%,100%{
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-            translateY(-8px);
-
+        transform:translateY(-8px);
     }
-
 }
-
 
 .card h3{
 
     font-size:22px;
 
     margin-bottom:10px;
-
 }
-
 
 .card p{
 
     color:#8da5bb;
-
 }
 
 
-/* ==================================================
-   YOUTUBE SECTION
-================================================== */
+/* =========================================
+   VIDEOS IN PROGRESS
+========================================= */
+
+.upcoming{
+
+    padding-top:110px;
+}
+
+.upcoming .section-title h2{
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #27aaff,
+            #fff
+        );
+
+    background-size:200% auto;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:
+        gradientMove 3s
+        linear infinite;
+}
+
+.upcoming-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.upcoming-card{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,27,47,.95),
+            rgba(3,12,23,.95)
+        );
+
+    border:
+        1px solid
+        rgba(30,145,230,.25);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    opacity:0;
+
+    transform:
+        translateY(60px);
+
+    box-shadow:
+        0 10px 40px
+        rgba(0,0,0,.25);
+}
+
+.upcoming-card.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+.upcoming-card:hover{
+
+    transform:
+        translateY(-10px);
+
+    border-color:#159fff;
+
+    box-shadow:
+        0 20px 55px
+        rgba(0,140,255,.25);
+}
+
+
+/* =========================================
+   THUMBNAIL
+========================================= */
+
+.upcoming-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:16 / 9;
+
+    background:#06101e;
+}
+
+.upcoming-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+}
+
+.upcoming-card:hover
+.upcoming-image img{
+
+    transform:scale(1.07);
+
+    filter:brightness(1.08);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    padding:
+        8px 14px;
+
+    border-radius:30px;
+
+    background:
+        rgba(0,0,0,.78);
+
+    border:
+        1px solid
+        rgba(0,162,255,.5);
+
+    backdrop-filter:
+        blur(8px);
+
+    color:#42baff;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 0 15px
+        rgba(0,140,255,.25);
+}
+
+
+/* =========================================
+   UPCOMING TEXT
+========================================= */
+
+.upcoming-content{
+
+    padding:
+        22px 20px 25px;
+
+    text-align:center;
+}
+
+.upcoming-content h3{
+
+    font-size:22px;
+
+    margin-bottom:13px;
+
+    color:white;
+}
+
+.upcoming-content p{
+
+    color:#9bb0c3;
+
+    line-height:2;
+
+    font-size:15px;
+}
+
+.upcoming-line{
+
+    width:50px;
+
+    height:3px;
+
+    margin:
+        17px auto 0;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #08a5ff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px
+        #008cff;
+}
+
+
+/* =========================================
+   YOUTUBE CTA
+========================================= */
 
 .cta{
 
@@ -862,31 +924,26 @@ section{
     box-shadow:
         0 0 60px
         rgba(0,130,255,.08);
-
 }
-
 
 .cta h2{
 
     font-size:35px;
 
     margin-bottom:10px;
-
 }
-
 
 .cta p{
 
     color:#8ea7be;
 
     margin-bottom:20px;
-
 }
 
 
-/* ==================================================
+/* =========================================
    FOOTER
-================================================== */
+========================================= */
 
 footer{
 
@@ -898,20 +955,18 @@ footer{
 
     border-top:
         1px solid #112940;
-
 }
 
 
-/* ==================================================
+/* =========================================
    PARTICLES
-================================================== */
+========================================= */
 
 .particle{
 
     position:fixed;
 
     width:4px;
-
     height:4px;
 
     background:#28aaff;
@@ -924,75 +979,61 @@ footer{
 
     animation:
         particleMove
-        linear
-        infinite;
-
+        linear infinite;
 }
-
 
 @keyframes particleMove{
 
     from{
-
-        transform:
-            translateY(100vh);
-
+        transform:translateY(100vh);
     }
 
     to{
-
-        transform:
-            translateY(-10vh);
-
+        transform:translateY(-10vh);
     }
-
 }
 
 
-/* ==================================================
+/* =========================================
    MOBILE
-================================================== */
+========================================= */
 
 @media(max-width:800px){
 
     .nav-links{
-
         display:none;
-
     }
-
 
     .cards{
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns:1fr;
     }
 
+    .upcoming-grid{
+        grid-template-columns:1fr;
+    }
 
     .hero h1{
-
         font-size:50px;
-
     }
-
 
     .avatar{
 
         width:130px;
-
         height:130px;
 
         font-size:40px;
-
     }
 
-
     section{
+        padding:70px 15px;
+    }
 
-        padding:
-            70px 15px;
+    .section-title h2{
+        font-size:30px;
+    }
 
+    .upcoming-content h3{
+        font-size:20px;
     }
 
 }
@@ -1005,9 +1046,9 @@ footer{
 <body>
 
 
-<!-- ==================================================
-     LOADING SCREEN
-================================================== -->
+<!-- =========================================
+     LOADING
+========================================= -->
 
 <div id="loader">
 
@@ -1018,9 +1059,9 @@ footer{
 </div>
 
 
-<!-- ==================================================
+<!-- =========================================
      NAVBAR
-================================================== -->
+========================================= -->
 
 <nav>
 
@@ -1030,24 +1071,24 @@ footer{
 Prm_Zero
 </div>
 
-
 <ul class="nav-links">
 
 <li>
-
 <a href="#about">
 درباره کانال
 </a>
-
 </li>
 
+<li>
+<a href="#upcoming">
+ویدیوهای در حال ساخت
+</a>
+</li>
 
 <li>
-
 <a href="#youtube">
 یوتیوب
 </a>
-
 </li>
 
 </ul>
@@ -1057,35 +1098,28 @@ Prm_Zero
 </nav>
 
 
-<!-- ==================================================
+<!-- =========================================
      HERO
-================================================== -->
+========================================= -->
 
 <header class="hero">
 
 <div class="hero-content">
 
-
 <div class="avatar">
 PZ
 </div>
-
 
 <h1>
 Prm_Zero
 </h1>
 
-
 <p>
-
 کانال گیمینگ با تمرکز روی فری‌فایر،
 گیم‌پلی، آموزش و لحظات خفن بازی.
-
 </p>
 
-
 <div class="buttons">
-
 
 <a
 class="btn"
@@ -1097,7 +1131,6 @@ rel="noopener noreferrer">
 
 </a>
 
-
 </div>
 
 </div>
@@ -1105,21 +1138,19 @@ rel="noopener noreferrer">
 </header>
 
 
-<!-- ==================================================
+<!-- =========================================
      CONTENT
-================================================== -->
+========================================= -->
 
 <section id="about">
 
 <div class="container">
-
 
 <div class="section-title">
 
 <h2>
 محتوای Prm_Zero
 </h2>
-
 
 <p>
 برای مشاهده ویدیو روی هر بخش کلیک کن
@@ -1131,9 +1162,9 @@ rel="noopener noreferrer">
 <div class="cards">
 
 
-<!-- ==================================================
+<!-- =========================================
      GAMEPLAY
-================================================== -->
+========================================= -->
 
 <a
 href="https://youtu.be/ZvK0fPXgnA0?si=2Nr8scO9JaI3WJju"
@@ -1141,28 +1172,24 @@ target="_blank"
 rel="noopener noreferrer"
 class="card">
 
-
 <div class="card-icon">
 🎮
 </div>
-
 
 <h3>
 گیم پلی فری فایر
 </h3>
 
-
 <p>
 گیم‌پلی‌های جذاب و خفن فری‌فایر
 </p>
 
-
 </a>
 
 
-<!-- ==================================================
+<!-- =========================================
      TUTORIAL
-================================================== -->
+========================================= -->
 
 <a
 href="https://youtu.be/fzntgRMk7EQ?si=eqbExVql4VtOCagC"
@@ -1170,28 +1197,24 @@ target="_blank"
 rel="noopener noreferrer"
 class="card">
 
-
 <div class="card-icon">
 🥶
 </div>
-
 
 <h3>
 آموزش و ترفند
 </h3>
 
-
 <p>
 آموزش تنظیمات، ترفندها و تکنیک‌های بازی
 </p>
 
-
 </a>
 
 
-<!-- ==================================================
+<!-- =========================================
      COOL MOMENTS
-================================================== -->
+========================================= -->
 
 <a
 href="https://youtu.be/ymzibUhKkE4?si=C0mCSUl8MO1FzB34"
@@ -1199,21 +1222,17 @@ target="_blank"
 rel="noopener noreferrer"
 class="card">
 
-
 <div class="card-icon">
 🔥
 </div>
-
 
 <h3>
 لحظات خفن
 </h3>
 
-
 <p>
 هدشات، کلچ و صحنه‌های جذاب گیمینگ
 </p>
-
 
 </a>
 
@@ -1225,27 +1244,169 @@ class="card">
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
+     VIDEOS IN PROGRESS
+========================================= -->
+
+<section
+id="upcoming"
+class="upcoming">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+🚧 ویدیوهای در حال ساخت
+</h2>
+
+<p>
+ویدیوهای جدید Prm_Zero به زودی منتشر می‌شوند 🔥
+</p>
+
+</div>
+
+
+<div class="upcoming-grid">
+
+
+<!-- =========================================
+     MACRO ICE
+     
+     عکس اولی که فرستادی
+========================================= -->
+
+<div class="upcoming-card">
+
+<div class="upcoming-image">
+
+<img
+src="images/macro-ice.png"
+alt="آموزش ماکرو یخ برای گوشی">
+
+<div class="status">
+🚧 در حال ساخت
+</div>
+
+</div>
+
+<div class="upcoming-content">
+
+<h3>
+🥶 ماکرو یخ سرعتی برای گوشی
+</h3>
+
+<p>
+ویدیو که قولشو بهتون دادم به زودی ساخته میشه
+ماکرو یخ سرعتی برای گوشی
+</p>
+
+<div class="upcoming-line"></div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     NEW SENSI
+     
+     عکس دومی که فرستادی
+========================================= -->
+
+<div class="upcoming-card">
+
+<div class="upcoming-image">
+
+<img
+src="images/sens-new.png"
+alt="تامنیل سنس جدید">
+
+<div class="status">
+🚧 در حال ساخت
+</div>
+
+</div>
+
+<div class="upcoming-content">
+
+<h3>
+🎯 سنس جدید
+</h3>
+
+<p>
+قراره به زودی سنس جدید خودمو بهتون بدم
+</p>
+
+<div class="upcoming-line"></div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     BIG SMOKE
+     
+     عکس سومی که فرستادی
+========================================= -->
+
+<div class="upcoming-card">
+
+<div class="upcoming-image">
+
+<img
+src="images/big-smoke.png"
+alt="تامنیل فایل ست بیگ اسموک">
+
+<div class="status">
+🚧 در حال ساخت
+</div>
+
+</div>
+
+<div class="upcoming-content">
+
+<h3>
+💚 فایل ست بیگ اسموک
+</h3>
+
+<p>
+قراره به زودی فایل ست بیگ اسموک رو براتون خز کنم
+</p>
+
+<div class="upcoming-line"></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
      YOUTUBE
-================================================== -->
+========================================= -->
 
 <section id="youtube">
 
 <div class="container">
 
-
 <div class="cta">
-
 
 <h2>
 عضو خانواده Prm_Zero شو 🔥
 </h2>
 
-
 <p>
 برای دیدن ویدیوهای جدید وارد کانال یوتیوب شو.
 </p>
-
 
 <a
 class="btn"
@@ -1257,7 +1418,6 @@ rel="noopener noreferrer">
 
 </a>
 
-
 </div>
 
 </div>
@@ -1265,9 +1425,9 @@ rel="noopener noreferrer">
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
      FOOTER
-================================================== -->
+========================================= -->
 
 <footer>
 
@@ -1278,9 +1438,9 @@ rel="noopener noreferrer">
 
 <script>
 
-/* ==================================================
+/* =========================================
    LOADING
-================================================== */
+========================================= */
 
 window.addEventListener("load",function(){
 
@@ -1295,12 +1455,15 @@ window.addEventListener("load",function(){
 });
 
 
-/* ==================================================
-   CARD SCROLL ANIMATION
-================================================== */
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
 
 const cards =
 document.querySelectorAll(".card");
+
+const upcomingCards =
+document.querySelectorAll(".upcoming-card");
 
 
 const observer =
@@ -1322,9 +1485,7 @@ new IntersectionObserver(
 
 {
     threshold:.15
-}
-
-);
+});
 
 
 cards.forEach(card=>{
@@ -1334,35 +1495,36 @@ cards.forEach(card=>{
 });
 
 
-/* ==================================================
+upcomingCards.forEach(card=>{
+
+    observer.observe(card);
+
+});
+
+
+/* =========================================
    PARTICLES
-================================================== */
+========================================= */
 
 for(let i=0;i<35;i++){
 
     const particle =
     document.createElement("div");
 
-
     particle.className =
     "particle";
-
 
     particle.style.left =
     Math.random()*100+"%";
 
-
     particle.style.animationDuration =
     (5+Math.random()*10)+"s";
-
 
     particle.style.animationDelay =
     Math.random()*5+"s";
 
-
     particle.style.opacity =
     Math.random()*.7;
-
 
     document.body.appendChild(particle);
 
