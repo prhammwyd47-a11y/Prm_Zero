@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Prm_Zero | Gaming</title>
 
@@ -34,7 +35,7 @@ body{
 
 
 /* =========================================
-   LOADING SCREEN
+   LOADING
 ========================================= */
 
 #loader{
@@ -51,22 +52,17 @@ body{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     z-index:999999;
 
     opacity:1;
-
     visibility:visible;
 
     transition:
         opacity .7s ease,
         visibility .7s ease;
 }
-
-
-/* وقتی لودینگ تمام شد */
 
 #loader.hide{
 
@@ -77,12 +73,10 @@ body{
     pointer-events:none;
 }
 
-
-/* متن Prm_Zero */
-
 .loader-logo{
 
-    font-size:clamp(45px,8vw,85px);
+    font-size:
+        clamp(45px,8vw,85px);
 
     font-weight:bold;
 
@@ -92,8 +86,7 @@ body{
 
     opacity:0;
 
-    transform:
-        scale(.7);
+    transform:scale(.7);
 
     filter:blur(12px);
 
@@ -103,60 +96,39 @@ body{
         0 0 60px #008cff;
 
     animation:
-        loaderText 2s
-        ease forwards;
+        loaderText 2s ease forwards;
 }
-
-
-/* انیمیشن متن */
 
 @keyframes loaderText{
 
     0%{
-
         opacity:0;
-
         transform:scale(.7);
-
         filter:blur(12px);
-
     }
 
     35%{
-
         opacity:.35;
-
         transform:scale(.85);
-
         filter:blur(6px);
-
     }
 
     70%{
-
         opacity:.85;
-
         transform:scale(1);
-
         filter:blur(1px);
-
     }
 
     100%{
-
         opacity:1;
-
         transform:scale(1);
-
         filter:blur(0);
-
     }
-
 }
 
 
 /* =========================================
-   BACKGROUND LIGHTS
+   BACKGROUND
 ========================================= */
 
 body::before{
@@ -175,7 +147,6 @@ body::before{
     opacity:.12;
 
     top:-200px;
-
     right:-150px;
 
     z-index:-2;
@@ -204,7 +175,6 @@ body::after{
     opacity:.1;
 
     bottom:-200px;
-
     left:-150px;
 
     z-index:-2;
@@ -217,42 +187,26 @@ body::after{
         ease-in-out;
 }
 
-
 @keyframes moveLight{
 
     from{
-
-        transform:
-            translate(0,0);
-
+        transform:translate(0,0);
     }
 
     to{
-
-        transform:
-            translate(-150px,150px);
-
+        transform:translate(-150px,150px);
     }
-
 }
-
 
 @keyframes moveLight2{
 
     from{
-
-        transform:
-            translate(0,0);
-
+        transform:translate(0,0);
     }
 
     to{
-
-        transform:
-            translate(150px,-100px);
-
+        transform:translate(150px,-100px);
     }
-
 }
 
 
@@ -273,14 +227,12 @@ nav{
     background:
         rgba(3,9,20,.65);
 
-    backdrop-filter:
-        blur(15px);
+    backdrop-filter:blur(15px);
 
     border-bottom:
         1px solid
         rgba(0,153,255,.15);
 }
-
 
 .nav{
 
@@ -298,7 +250,6 @@ nav{
 
     justify-content:space-between;
 }
-
 
 .logo{
 
@@ -319,26 +270,19 @@ nav{
         alternate;
 }
 
-
 @keyframes logoGlow{
 
     from{
-
         text-shadow:
             0 0 8px #008cff;
-
     }
 
     to{
-
         text-shadow:
             0 0 10px #008cff,
             0 0 30px #008cff;
-
     }
-
 }
-
 
 .nav-links{
 
@@ -349,7 +293,6 @@ nav{
     list-style:none;
 }
 
-
 .nav-links a{
 
     color:#b9cce0;
@@ -359,14 +302,12 @@ nav{
     transition:.3s;
 }
 
-
 .nav-links a:hover{
 
     color:#31adff;
 
     text-shadow:
         0 0 10px #008cff;
-
 }
 
 
@@ -390,36 +331,24 @@ nav{
         100px 20px;
 }
 
-
 .hero-content{
 
     animation:
         heroEnter
-        1.2s
-        ease forwards;
+        1.2s ease forwards;
 }
-
 
 @keyframes heroEnter{
 
     from{
-
         opacity:0;
-
-        transform:
-            translateY(50px);
-
+        transform:translateY(50px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
-
 }
 
 
@@ -430,7 +359,6 @@ nav{
 .avatar{
 
     width:160px;
-
     height:160px;
 
     margin:auto;
@@ -440,7 +368,6 @@ nav{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     font-size:50px;
@@ -469,23 +396,15 @@ nav{
         infinite;
 }
 
-
 @keyframes avatarFloat{
 
     0%,100%{
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-            translateY(-15px);
-
+        transform:translateY(-15px);
     }
-
 }
 
 
@@ -508,14 +427,10 @@ nav{
             #fff
         );
 
-    background-size:
-        200% auto;
+    background-size:200% auto;
 
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
+    -webkit-background-clip:text;
+    background-clip:text;
 
     color:transparent;
 
@@ -530,39 +445,25 @@ nav{
         ease;
 }
 
-
 @keyframes gradientMove{
 
     to{
-
-        background-position:
-            200% center;
-
+        background-position:200% center;
     }
-
 }
-
 
 @keyframes titleEnter{
 
     from{
-
         opacity:0;
-
         letter-spacing:20px;
-
     }
 
     to{
-
         opacity:1;
-
         letter-spacing:normal;
-
     }
-
 }
-
 
 .hero p{
 
@@ -592,7 +493,6 @@ nav{
     gap:12px;
 }
 
-
 .btn{
 
     display:inline-block;
@@ -617,7 +517,6 @@ nav{
         rgba(0,150,255,.3);
 }
 
-
 .btn:hover{
 
     transform:
@@ -640,7 +539,6 @@ section{
         100px 20px;
 }
 
-
 .container{
 
     width:90%;
@@ -650,7 +548,6 @@ section{
     margin:auto;
 }
 
-
 .section-title{
 
     text-align:center;
@@ -658,14 +555,12 @@ section{
     margin-bottom:50px;
 }
 
-
 .section-title h2{
 
     font-size:38px;
 
     margin-bottom:10px;
 }
-
 
 .section-title p{
 
@@ -686,7 +581,6 @@ section{
 
     gap:22px;
 }
-
 
 .card{
 
@@ -722,20 +616,15 @@ section{
 
     opacity:0;
 
-    transform:
-        translateY(40px);
+    transform:translateY(40px);
 }
-
 
 .card.show{
 
     opacity:1;
 
-    transform:
-        translateY(0);
-
+    transform:translateY(0);
 }
-
 
 .card::before{
 
@@ -744,7 +633,6 @@ section{
     position:absolute;
 
     width:100px;
-
     height:100px;
 
     background:#009cff;
@@ -754,12 +642,10 @@ section{
     opacity:.15;
 
     top:-30px;
-
     right:-30px;
 
     transition:.4s;
 }
-
 
 .card:hover{
 
@@ -774,13 +660,9 @@ section{
         rgba(0,140,255,.25);
 }
 
-
 .card:hover::before{
-
     opacity:.35;
-
 }
-
 
 .card-icon{
 
@@ -795,25 +677,16 @@ section{
         ease-in-out;
 }
 
-
 @keyframes iconFloat{
 
     0%,100%{
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-            translateY(-8px);
-
+        transform:translateY(-8px);
     }
-
 }
-
 
 .card h3{
 
@@ -821,7 +694,6 @@ section{
 
     margin-bottom:10px;
 }
-
 
 .card p{
 
@@ -838,7 +710,6 @@ section{
     padding-top:110px;
 }
 
-
 .upcoming .section-title h2{
 
     background:
@@ -849,14 +720,10 @@ section{
             #fff
         );
 
-    background-size:
-        200% auto;
+    background-size:200% auto;
 
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
+    -webkit-background-clip:text;
+    background-clip:text;
 
     color:transparent;
 
@@ -867,7 +734,6 @@ section{
         infinite;
 }
 
-
 .upcoming-grid{
 
     display:grid;
@@ -877,7 +743,6 @@ section{
 
     gap:25px;
 }
-
 
 .upcoming-card{
 
@@ -896,33 +761,27 @@ section{
 
     overflow:hidden;
 
-    transition:
-        .45s;
+    transition:.45s;
 
     opacity:0;
 
-    transform:
-        translateY(60px);
+    transform:translateY(60px);
 
     box-shadow:
         0 10px 40px
         rgba(0,0,0,.25);
 }
 
-
 .upcoming-card.show{
 
     opacity:1;
 
-    transform:
-        translateY(0);
+    transform:translateY(0);
 }
-
 
 .upcoming-card:hover{
 
-    transform:
-        translateY(-10px);
+    transform:translateY(-10px);
 
     border-color:#159fff;
 
@@ -933,7 +792,7 @@ section{
 
 
 /* =========================================
-   THUMBNAILS
+   IMAGE AREA
 ========================================= */
 
 .upcoming-image{
@@ -942,12 +801,16 @@ section{
 
     overflow:hidden;
 
-    aspect-ratio:
-        16 / 9;
+    aspect-ratio:16 / 9;
 
     background:#06101e;
 }
 
+
+/*
+   جلوگیری از تغییر اندازه صفحه
+   هنگام لود تصویر
+*/
 
 .upcoming-image img{
 
@@ -962,17 +825,22 @@ section{
     transition:
         transform .6s ease,
         filter .6s ease;
+
+    /*
+       رندر تصویر را به صورت
+       غیرهمزمان انجام بده
+    */
+
+    content-visibility:auto;
 }
 
 
 .upcoming-card:hover
 .upcoming-image img{
 
-    transform:
-        scale(1.07);
+    transform:scale(1.07);
 
-    filter:
-        brightness(1.08);
+    filter:brightness(1.08);
 }
 
 
@@ -985,7 +853,6 @@ section{
     position:absolute;
 
     top:15px;
-
     right:15px;
 
     padding:
@@ -1027,7 +894,6 @@ section{
     text-align:center;
 }
 
-
 .upcoming-content h3{
 
     font-size:22px;
@@ -1037,7 +903,6 @@ section{
     color:white;
 }
 
-
 .upcoming-content p{
 
     color:#9bb0c3;
@@ -1046,7 +911,6 @@ section{
 
     font-size:15px;
 }
-
 
 .upcoming-line{
 
@@ -1074,7 +938,7 @@ section{
 
 
 /* =========================================
-   YOUTUBE CTA
+   YOUTUBE
 ========================================= */
 
 .cta{
@@ -1101,14 +965,12 @@ section{
         rgba(0,130,255,.08);
 }
 
-
 .cta h2{
 
     font-size:35px;
 
     margin-bottom:10px;
 }
-
 
 .cta p{
 
@@ -1144,7 +1006,6 @@ footer{
     position:fixed;
 
     width:4px;
-
     height:4px;
 
     background:#28aaff;
@@ -1161,23 +1022,15 @@ footer{
         infinite;
 }
 
-
 @keyframes particleMove{
 
     from{
-
-        transform:
-            translateY(100vh);
-
+        transform:translateY(100vh);
     }
 
     to{
-
-        transform:
-            translateY(-10vh);
-
+        transform:translateY(-10vh);
     }
-
 }
 
 
@@ -1188,65 +1041,37 @@ footer{
 @media(max-width:800px){
 
     .nav-links{
-
         display:none;
-
     }
-
 
     .cards{
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns:1fr;
     }
-
 
     .upcoming-grid{
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns:1fr;
     }
-
 
     .hero h1{
-
         font-size:50px;
-
     }
-
 
     .avatar{
-
         width:130px;
-
         height:130px;
-
         font-size:40px;
-
     }
-
 
     section{
-
-        padding:
-            70px 15px;
-
+        padding:70px 15px;
     }
-
 
     .section-title h2{
-
         font-size:30px;
-
     }
 
-
     .upcoming-content h3{
-
         font-size:20px;
-
     }
 
 }
@@ -1260,7 +1085,7 @@ footer{
 
 
 <!-- =========================================
-     LOADING SCREEN
+     LOADING
 ========================================= -->
 
 <div id="loader">
@@ -1283,7 +1108,6 @@ footer{
 <div class="logo">
 Prm_Zero
 </div>
-
 
 <ul class="nav-links">
 
@@ -1324,17 +1148,14 @@ Prm_Zero
 PZ
 </div>
 
-
 <h1>
 Prm_Zero
 </h1>
-
 
 <p>
 کانال گیمینگ با تمرکز روی فری‌فایر،
 گیم‌پلی، آموزش و لحظات خفن بازی.
 </p>
-
 
 <div class="buttons">
 
@@ -1356,13 +1177,12 @@ rel="noopener noreferrer">
 
 
 <!-- =========================================
-     MAIN CONTENT
+     CONTENT
 ========================================= -->
 
 <section id="about">
 
 <div class="container">
-
 
 <div class="section-title">
 
@@ -1380,9 +1200,7 @@ rel="noopener noreferrer">
 <div class="cards">
 
 
-<!-- =========================================
-     GAMEPLAY
-========================================= -->
+<!-- GAMEPLAY -->
 
 <a
 href="https://youtu.be/ZvK0fPXgnA0?si=2Nr8scO9JaI3WJju"
@@ -1405,9 +1223,7 @@ class="card">
 </a>
 
 
-<!-- =========================================
-     TUTORIAL
-========================================= -->
+<!-- TUTORIAL -->
 
 <a
 href="https://youtu.be/fzntgRMk7EQ?si=eqbExVql4VtOCagC"
@@ -1430,9 +1246,7 @@ class="card">
 </a>
 
 
-<!-- =========================================
-     COOL MOMENTS
-========================================= -->
+<!-- COOL MOMENTS -->
 
 <a
 href="https://youtu.be/ymzibUhKkE4?si=C0mCSUl8MO1FzB34"
@@ -1472,7 +1286,6 @@ class="upcoming">
 
 <div class="container">
 
-
 <div class="section-title">
 
 <h2>
@@ -1499,14 +1312,17 @@ class="upcoming">
 
 <img
 src="images/macro-ice.png"
-alt="آموزش ماکرو یخ برای گوشی">
+alt="آموزش ماکرو یخ برای گوشی"
+width="1280"
+height="720"
+fetchpriority="high"
+decoding="async">
 
 <div class="status">
 🚧 در حال ساخت
 </div>
 
 </div>
-
 
 <div class="upcoming-content">
 
@@ -1536,14 +1352,17 @@ alt="آموزش ماکرو یخ برای گوشی">
 
 <img
 src="images/sens-new.png"
-alt="تامنیل سنس جدید">
+alt="تامنیل سنس جدید"
+width="1280"
+height="720"
+loading="lazy"
+decoding="async">
 
 <div class="status">
 🚧 در حال ساخت
 </div>
 
 </div>
-
 
 <div class="upcoming-content">
 
@@ -1572,14 +1391,17 @@ alt="تامنیل سنس جدید">
 
 <img
 src="images/big-smoke.png"
-alt="تامنیل فایل ست بیگ اسموک">
+alt="تامنیل فایل ست بیگ اسموک"
+width="1280"
+height="720"
+loading="lazy"
+decoding="async">
 
 <div class="status">
 🚧 در حال ساخت
 </div>
 
 </div>
-
 
 <div class="upcoming-content">
 
@@ -1654,31 +1476,32 @@ rel="noopener noreferrer">
 <script>
 
 /* =========================================
-   LOADING SCREEN
-   دقیقاً حدود ۳ ثانیه
+   LOADING
+   دقیقاً ۳ ثانیه
 ========================================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
 
-    const loader =
-        document.getElementById("loader");
+        const loader =
+            document.getElementById("loader");
 
-    /*
-       بعد از ۳ ثانیه لودینگ بسته می‌شود.
-       این تایمر به لود شدن عکس‌ها وابسته نیست.
-    */
+        setTimeout(
+            function(){
 
-    setTimeout(function(){
+                loader.classList.add("hide");
 
-        loader.classList.add("hide");
+            },
+            3000
+        );
 
-    },3000);
-
-});
+    }
+);
 
 
 /* =========================================
-   SCROLL ANIMATIONS
+   SCROLL ANIMATION
 ========================================= */
 
 const cards =
@@ -1699,6 +1522,10 @@ new IntersectionObserver(
 
             entry.target.classList.add("show");
 
+            observer.unobserve(
+                entry.target
+            );
+
         }
 
     });
@@ -1706,7 +1533,10 @@ new IntersectionObserver(
 },
 
 {
-    threshold:.15
+    threshold:.08,
+
+    rootMargin:
+        "0px 0px 150px 0px"
 });
 
 
@@ -1728,7 +1558,7 @@ upcomingCards.forEach(card=>{
    PARTICLES
 ========================================= */
 
-for(let i=0;i<35;i++){
+for(let i=0;i<25;i++){
 
     const particle =
         document.createElement("div");
@@ -1748,7 +1578,9 @@ for(let i=0;i<35;i++){
     particle.style.opacity =
         Math.random()*.7;
 
-    document.body.appendChild(particle);
+    document.body.appendChild(
+        particle
+    );
 
 }
 
