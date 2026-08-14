@@ -577,7 +577,7 @@ section{
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(4,1fr);
 
     gap:22px;
 }
@@ -702,6 +702,62 @@ section{
 
 
 /* =========================================
+   HEADSHOT DOWNLOAD CARD
+========================================= */
+
+.download-card{
+
+    cursor:pointer;
+}
+
+.download-card .card-icon{
+
+    filter:
+        drop-shadow(0 0 10px #008cff)
+        drop-shadow(0 0 25px rgba(0,140,255,.5));
+}
+
+.download-label{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:
+        9px 18px;
+
+    border-radius:10px;
+
+    background:
+        rgba(0,140,255,.12);
+
+    border:
+        1px solid
+        rgba(0,153,255,.35);
+
+    color:#39b5ff;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.download-card:hover
+.download-label{
+
+    background:#079cff;
+
+    color:#fff;
+
+    box-shadow:
+        0 0 20px
+        rgba(0,140,255,.4);
+}
+
+
+/* =========================================
    UPCOMING VIDEOS
 ========================================= */
 
@@ -806,12 +862,6 @@ section{
     background:#06101e;
 }
 
-
-/*
-   جلوگیری از تغییر اندازه صفحه
-   هنگام لود تصویر
-*/
-
 .upcoming-image img{
 
     width:100%;
@@ -826,14 +876,8 @@ section{
         transform .6s ease,
         filter .6s ease;
 
-    /*
-       رندر تصویر را به صورت
-       غیرهمزمان انجام بده
-    */
-
     content-visibility:auto;
 }
-
 
 .upcoming-card:hover
 .upcoming-image img{
@@ -1038,6 +1082,15 @@ footer{
    MOBILE
 ========================================= */
 
+@media(max-width:1000px){
+
+    .cards{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
 @media(max-width:800px){
 
     .nav-links{
@@ -1191,7 +1244,7 @@ rel="noopener noreferrer">
 </h2>
 
 <p>
-برای مشاهده ویدیو روی هر بخش کلیک کن
+برای مشاهده ویدیو یا دانلود فایل روی هر بخش کلیک کن
 </p>
 
 </div>
@@ -1200,7 +1253,9 @@ rel="noopener noreferrer">
 <div class="cards">
 
 
-<!-- GAMEPLAY -->
+<!-- =========================================
+     GAMEPLAY
+========================================= -->
 
 <a
 href="https://youtu.be/ZvK0fPXgnA0?si=2Nr8scO9JaI3WJju"
@@ -1223,7 +1278,9 @@ class="card">
 </a>
 
 
-<!-- TUTORIAL -->
+<!-- =========================================
+     TUTORIAL
+========================================= -->
 
 <a
 href="https://youtu.be/fzntgRMk7EQ?si=eqbExVql4VtOCagC"
@@ -1246,7 +1303,9 @@ class="card">
 </a>
 
 
-<!-- COOL MOMENTS -->
+<!-- =========================================
+     COOL MOMENTS
+========================================= -->
 
 <a
 href="https://youtu.be/ymzibUhKkE4?si=C0mCSUl8MO1FzB34"
@@ -1265,6 +1324,34 @@ class="card">
 <p>
 هدشات، کلچ و صحنه‌های جذاب گیمینگ
 </p>
+
+</a>
+
+
+<!-- =========================================
+     HEADSHOT SETTINGS
+========================================= -->
+
+<a
+href="File/headshot-settings.rar"
+download="headshot-settings.rar"
+class="card download-card">
+
+<div class="card-icon">
+🎯
+</div>
+
+<h3>
+فایل‌های تنظیمات هدشات
+</h3>
+
+<p>
+فایل تنظیمات هدشات فری‌فایر
+</p>
+
+<span class="download-label">
+⬇ دانلود فایل
+</span>
 
 </a>
 
@@ -1311,7 +1398,7 @@ class="upcoming">
 <div class="upcoming-image">
 
 <img
-src="images/macro-ice.png"
+src="Images/macro-ice.png"
 alt="آموزش ماکرو یخ برای گوشی"
 width="1280"
 height="720"
@@ -1351,7 +1438,7 @@ decoding="async">
 <div class="upcoming-image">
 
 <img
-src="images/sens-new.png"
+src="Images/sens-new.png"
 alt="تامنیل سنس جدید"
 width="1280"
 height="720"
@@ -1390,7 +1477,7 @@ decoding="async">
 <div class="upcoming-image">
 
 <img
-src="images/big-smoke.png"
+src="Images/big-smoke.png"
 alt="تامنیل فایل ست بیگ اسموک"
 width="1280"
 height="720"
