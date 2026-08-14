@@ -8,1012 +8,55 @@
     <title>Prm_Zero | سایت گیمینگ</title>
 
     <meta name="description"
-        content="سایت رسمی Prm_Zero - آموزش فری فایر، گیم پلی، ترفند، فایل تنظیمات هدشات و ویدیوهای جدید">
+        content="سایت رسمی Prm_Zero | آموزش فری فایر، گیم پلی، ترفند و فایل‌های کاربردی">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Preload تصاویر برای لود سریع‌تر -->
+    <!-- لود سریع تصاویر -->
     <link rel="preload" as="image" href="images/macro-ice.png">
     <link rel="preload" as="image" href="images/sens-new.png">
     <link rel="preload" as="image" href="images/big-smoke.png">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-            background: #020617;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        /* =========================
-           LOADING
-        ========================= */
-
-        #loader {
-            position: fixed;
-            inset: 0;
-            z-index: 99999;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(0, 200, 255, 0.18),
-                    transparent 35%
-                ),
-                #020617;
-
-            transition:
-                opacity .7s ease,
-                visibility .7s ease;
-        }
-
-        #loader.hide {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        .loader-name {
-            font-size: clamp(45px, 9vw, 90px);
-            font-weight: 900;
-            letter-spacing: 3px;
-
-            color: #fff;
-
-            text-shadow:
-                0 0 10px #00d9ff,
-                0 0 25px #00d9ff,
-                0 0 50px #0077ff;
-
-            animation:
-                loaderText 2.5s ease forwards,
-                loaderGlow 1.5s ease-in-out infinite alternate;
-        }
-
-        .loader-line {
-            width: 230px;
-            height: 4px;
-
-            margin-top: 25px;
-
-            background: rgba(255,255,255,.1);
-
-            border-radius: 50px;
-            overflow: hidden;
-        }
-
-        .loader-line::after {
-            content: "";
-
-            display: block;
-
-            width: 0;
-            height: 100%;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #0077ff,
-                    #00eaff,
-                    #fff
-                );
-
-            box-shadow:
-                0 0 10px #00d9ff,
-                0 0 25px #00d9ff;
-
-            animation:
-                loadingBar 2.7s linear forwards;
-        }
-
-        @keyframes loaderText {
-
-            0% {
-                opacity: 0;
-                transform: translateY(30px) scale(.7);
-                filter: blur(12px);
-            }
-
-            40% {
-                opacity: 1;
-                transform: translateY(0) scale(1.08);
-                filter: blur(0);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes loaderGlow {
-
-            from {
-                text-shadow:
-                    0 0 10px #00d9ff,
-                    0 0 25px #00d9ff;
-            }
-
-            to {
-                text-shadow:
-                    0 0 15px #00d9ff,
-                    0 0 40px #0077ff,
-                    0 0 70px #00d9ff;
-            }
-        }
-
-        @keyframes loadingBar {
-
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-
-        /* =========================
-           NEON BACKGROUND
-        ========================= */
-
-        .neon-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -5;
-
-            background:
-                radial-gradient(
-                    circle at 15% 20%,
-                    rgba(0,140,255,.18),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 85% 30%,
-                    rgba(0,255,255,.12),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 50% 90%,
-                    rgba(40,80,255,.15),
-                    transparent 35%
-                ),
-                #020617;
-        }
-
-        .neon-bg::before {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background-image:
-                linear-gradient(
-                    rgba(255,255,255,.025) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,.025) 1px,
-                    transparent 1px
-                );
-
-            background-size: 45px 45px;
-
-            mask-image:
-                linear-gradient(
-                    to bottom,
-                    black,
-                    transparent
-                );
-        }
-
-        .light {
-            position: fixed;
-
-            width: 300px;
-            height: 300px;
-
-            border-radius: 50%;
-
-            background: #008cff;
-
-            filter: blur(130px);
-
-            opacity: .12;
-
-            pointer-events: none;
-
-            z-index: -4;
-
-            animation:
-                floatingLight 10s ease-in-out infinite alternate;
-        }
-
-        .light.one {
-            top: 10%;
-            left: -100px;
-        }
-
-        .light.two {
-            right: -100px;
-            top: 50%;
-
-            background: #00eaff;
-
-            animation-delay: 2s;
-        }
-
-        .light.three {
-            left: 40%;
-            bottom: -150px;
-
-            background: #004cff;
-
-            animation-delay: 4s;
-        }
-
-        @keyframes floatingLight {
-
-            from {
-                transform: translate(0,0);
-            }
-
-            to {
-                transform: translate(100px,70px);
-            }
-        }
-
-
-        /* =========================
-           MAIN
-        ========================= */
-
-        main {
-            width: min(1150px, 92%);
-            margin: auto;
-
-            padding:
-                50px 0 80px;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 85vh;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            flex-direction: column;
-        }
-
-        .hero-badge {
-            display: inline-block;
-
-            padding: 9px 18px;
-
-            margin-bottom: 25px;
-
-            border:
-                1px solid rgba(0,217,255,.5);
-
-            border-radius: 50px;
-
-            background:
-                rgba(0,217,255,.08);
-
-            color: #00eaff;
-
-            box-shadow:
-                0 0 20px rgba(0,217,255,.15);
-        }
-
-        .hero h1 {
-            font-size:
-                clamp(55px,10vw,110px);
-
-            font-weight: 900;
-
-            color: #fff;
-
-            text-shadow:
-                0 0 10px #00d9ff,
-                0 0 30px #0077ff,
-                0 0 60px rgba(0,217,255,.5);
-
-            animation:
-                heroFloat 4s ease-in-out infinite;
-        }
-
-        .hero p {
-            margin-top: 18px;
-
-            color: #b8c7dc;
-
-            font-size:
-                clamp(16px,3vw,21px);
-        }
-
-        @keyframes heroFloat {
-
-            0%,100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .hero-buttons {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 14px;
-
-            justify-content: center;
-
-            margin-top: 35px;
-        }
-
-        .btn {
-            padding: 14px 24px;
-
-            border-radius: 14px;
-
-            font-weight: bold;
-
-            transition:
-                transform .25s ease,
-                box-shadow .25s ease;
-        }
-
-        .btn:hover {
-            transform:
-                translateY(-5px) scale(1.03);
-        }
-
-        .btn-primary {
-            background:
-                linear-gradient(
-                    135deg,
-                    #0077ff,
-                    #00d9ff
-                );
-
-            box-shadow:
-                0 0 20px rgba(0,217,255,.35);
-        }
-
-        .btn-secondary {
-            border:
-                1px solid rgba(0,217,255,.4);
-
-            background:
-                rgba(0,217,255,.07);
-        }
-
-
-        /* =========================
-           SECTION
-        ========================= */
-
-        section {
-            margin-top: 90px;
-        }
-
-        .section-title {
-            text-align: center;
-
-            margin-bottom: 35px;
-        }
-
-        .section-title h2 {
-            font-size:
-                clamp(28px,5vw,42px);
-
-            text-shadow:
-                0 0 15px rgba(0,217,255,.5);
-        }
-
-        .section-title p {
-            margin-top: 10px;
-
-            color: #91a3ba;
-        }
-
-
-        /* =========================
-           CARDS
-        ========================= */
-
-        .cards {
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(240px,1fr)
-                );
-
-            gap: 22px;
-        }
-
-        .card {
-            position: relative;
-
-            padding: 28px;
-
-            min-height: 190px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(8,25,50,.88),
-                    rgba(2,8,20,.92)
-                );
-
-            border:
-                1px solid rgba(0,217,255,.16);
-
-            box-shadow:
-                0 15px 50px rgba(0,0,0,.25),
-                inset 0 0 30px rgba(0,217,255,.025);
-
-            overflow: hidden;
-
-            transition:
-                transform .3s ease,
-                border-color .3s ease,
-                box-shadow .3s ease;
-        }
-
-        .card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 130px;
-            height: 130px;
-
-            top: -70px;
-            left: -70px;
-
-            background: #00d9ff;
-
-            filter: blur(70px);
-
-            opacity: .15;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-
-            border-color:
-                rgba(0,217,255,.65);
-
-            box-shadow:
-                0 20px 60px rgba(0,100,255,.18),
-                0 0 30px rgba(0,217,255,.12);
-        }
-
-        .card-icon {
-            font-size: 42px;
-
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 22px;
-        }
-
-        .card p {
-            color: #94a7bf;
-
-            margin-top: 10px;
-
-            line-height: 1.8;
-        }
-
-        .card-link {
-            margin-top: 20px;
-
-            color: #00eaff;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           LATEST VIDEO
-        ========================= */
-
-        .latest-video {
-            position: relative;
-
-            padding: 35px;
-
-            border-radius: 25px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(0,120,255,.13),
-                    rgba(0,20,40,.75)
-                );
-
-            border:
-                1px solid rgba(0,217,255,.25);
-
-            overflow: hidden;
-
-            transition: .3s ease;
-        }
-
-        .latest-video:hover {
-            transform: translateY(-6px);
-
-            box-shadow:
-                0 0 45px rgba(0,217,255,.15);
-        }
-
-        .latest-video-content {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-        .latest-video-text {
-            flex: 1;
-        }
-
-        .latest-video-text h3 {
-            font-size: 30px;
-
-            margin-bottom: 15px;
-        }
-
-        .latest-video-text p {
-            color: #a5b6ca;
-
-            line-height: 2;
-        }
-
-        .watch-btn {
-            display: inline-block;
-
-            margin-top: 25px;
-
-            padding: 13px 25px;
-
-            border-radius: 12px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff1744,
-                    #ff004c
-                );
-
-            box-shadow:
-                0 0 25px rgba(255,0,60,.25);
-
-            font-weight: bold;
-
-            transition: .25s ease;
-        }
-
-        .watch-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .video-icon {
-            font-size: 100px;
-
-            animation:
-                pulseVideo 2s infinite;
-        }
-
-        @keyframes pulseVideo {
-
-            0%,100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.08);
-            }
-        }
-
-
-        /* =========================
-           UNDER CONSTRUCTION
-        ========================= */
-
-        .construction-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(280px,1fr)
-                );
-
-            gap: 25px;
-        }
-
-        .construction-card {
-            background:
-                rgba(5,14,30,.8);
-
-            border-radius: 22px;
-
-            overflow: hidden;
-
-            border:
-                1px solid rgba(0,217,255,.15);
-
-            transition: .3s ease;
-        }
-
-        .construction-card:hover {
-            transform: translateY(-8px);
-
-            border-color:
-                rgba(0,217,255,.6);
-
-            box-shadow:
-                0 0 35px rgba(0,217,255,.12);
-        }
-
-        .construction-card img {
-            width: 100%;
-
-            height: 210px;
-
-            object-fit: cover;
-
-            display: block;
-
-            background: #07101e;
-
-            transition:
-                transform .5s ease;
-        }
-
-        .construction-card:hover img {
-            transform: scale(1.04);
-        }
-
-        .construction-info {
-            padding: 22px;
-        }
-
-        .construction-info h3 {
-            font-size: 21px;
-
-            margin-bottom: 12px;
-        }
-
-        .construction-info p {
-            color: #a5b6ca;
-
-            line-height: 1.9;
-        }
-
-
-        /* =========================
-           HEADSHOT
-        ========================= */
-
-        .headshot-section {
-            text-align: center;
-        }
-
-        .headshot-card {
-            max-width: 650px;
-
-            margin: auto;
-
-            padding: 40px 25px;
-
-            border-radius: 25px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(0,110,255,.12),
-                    rgba(5,12,25,.9)
-                );
-
-            border:
-                1px solid rgba(0,217,255,.25);
-
-            box-shadow:
-                0 0 45px rgba(0,110,255,.08);
-        }
-
-        .headshot-icon {
-            font-size: 65px;
-
-            margin-bottom: 15px;
-        }
-
-        .headshot-card h3 {
-            font-size: 27px;
-        }
-
-        .headshot-card p {
-            margin-top: 12px;
-
-            color: #9db0c7;
-
-            line-height: 1.9;
-        }
-
-        .download-btn {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            margin-top: 25px;
-
-            padding: 15px 30px;
-
-            border-radius: 14px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0077ff,
-                    #00d9ff
-                );
-
-            box-shadow:
-                0 0 25px rgba(0,217,255,.3);
-
-            font-weight: bold;
-
-            transition: .25s ease;
-        }
-
-        .download-btn:hover {
-            transform:
-                translateY(-5px) scale(1.03);
-        }
-
-
-        /* =========================
-           TELEGRAM
-        ========================= */
-
-        .telegram-card {
-            text-align: center;
-
-            padding: 45px 25px;
-
-            border-radius: 25px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(0,150,255,.13),
-                    rgba(0,20,45,.8)
-                );
-
-            border:
-                1px solid rgba(0,180,255,.25);
-        }
-
-        .telegram-icon {
-            font-size: 65px;
-        }
-
-        .telegram-card h3 {
-            font-size: 28px;
-
-            margin-top: 15px;
-        }
-
-        .telegram-card p {
-            margin-top: 12px;
-
-            color: #9db0c7;
-        }
-
-        .telegram-btn {
-            display: inline-block;
-
-            margin-top: 25px;
-
-            padding: 14px 28px;
-
-            border-radius: 14px;
-
-            background: #159bd7;
-
-            box-shadow:
-                0 0 25px rgba(21,155,215,.3);
-
-            font-weight: bold;
-
-            transition: .25s ease;
-        }
-
-        .telegram-btn:hover {
-            transform: translateY(-5px);
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            margin-top: 100px;
-
-            padding: 30px 20px;
-
-            text-align: center;
-
-            border-top:
-                1px solid rgba(255,255,255,.06);
-
-            color: #71839b;
-        }
-
-        footer strong {
-            color: #00d9ff;
-        }
-
-
-        /* =========================
-           SCROLL ANIMATION
-        ========================= */
-
-        .reveal {
-            opacity: 0;
-
-            transform: translateY(40px);
-
-            transition:
-                opacity .8s ease,
-                transform .8s ease;
-        }
-
-        .reveal.show {
-            opacity: 1;
-
-            transform: translateY(0);
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width:700px) {
-
-            main {
-                width: 94%;
-            }
-
-            .hero {
-                min-height: 75vh;
-            }
-
-            .latest-video-content {
-                flex-direction: column;
-
-                text-align: center;
-            }
-
-            .video-icon {
-                font-size: 75px;
-            }
-
-            .construction-card img {
-                height: 190px;
-            }
-
-            section {
-                margin-top: 65px;
-            }
-        }
-
-    </style>
 </head>
-
 
 <body>
 
-
     <!-- =========================
-         LOADING SCREEN
-    ========================= -->
+         LOADING
+    ========================== -->
 
     <div id="loader">
 
-        <div class="loader-name">
+        <div class="loader-text">
             Prm_Zero
         </div>
 
-        <div class="loader-line"></div>
+        <div class="loader-bar">
+            <span></span>
+        </div>
 
     </div>
 
 
     <!-- =========================
-         NEON BACKGROUND
-    ========================= -->
+         BACKGROUND EFFECTS
+    ========================== -->
 
     <div class="neon-bg"></div>
 
-    <div class="light one"></div>
-    <div class="light two"></div>
-    <div class="light three"></div>
+    <div class="neon-light light-1"></div>
+    <div class="neon-light light-2"></div>
+    <div class="neon-light light-3"></div>
 
 
     <!-- =========================
          MAIN
-    ========================= -->
+    ========================== -->
 
     <main>
 
+        <!-- HERO -->
 
-        <!-- =========================
-             HERO
-        ========================= -->
-
-        <header class="hero">
+        <section class="hero">
 
             <div class="hero-badge">
                 🎮 سایت رسمی گیمینگ
@@ -1030,31 +73,31 @@
             <div class="hero-buttons">
 
                 <a
-                    class="btn btn-primary"
                     href="https://www.youtube.com/@Prm_Zero7"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="btn primary"
                 >
                     ▶ ورود به کانال یوتیوب
                 </a>
 
                 <a
-                    class="btn btn-secondary"
                     href="https://t.me/Prm_Zero"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="btn secondary"
                 >
                     📱 کانال تلگرام
                 </a>
 
             </div>
 
-        </header>
+        </section>
 
 
         <!-- =========================
              CONTENT
-        ========================= -->
+        ========================== -->
 
         <section class="reveal">
 
@@ -1065,7 +108,7 @@
                 </h2>
 
                 <p>
-                    روی هر بخش کلیک کن تا وارد ویدیو بشی
+                    برای ورود به ویدیو روی هر بخش کلیک کنید
                 </p>
 
             </div>
@@ -1077,27 +120,23 @@
                 <!-- آموزش و ترفند -->
 
                 <a
-                    class="card"
                     href="https://youtu.be/fzntgRMk7EQ?si=eqbExVql4VtOCagC"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="card"
                 >
 
-                    <div>
-
-                        <div class="card-icon">
-                            🥶
-                        </div>
-
-                        <h3>
-                            آموزش و ترفند
-                        </h3>
-
-                        <p>
-                            آموزش‌ها و ترفندهای کاربردی فری فایر
-                        </p>
-
+                    <div class="card-icon">
+                        🥶
                     </div>
+
+                    <h3>
+                        آموزش و ترفند
+                    </h3>
+
+                    <p>
+                        آموزش‌ها و ترفندهای کاربردی فری فایر
+                    </p>
 
                     <span class="card-link">
                         مشاهده ویدیو ←
@@ -1109,27 +148,23 @@
                 <!-- لحظات خفن -->
 
                 <a
-                    class="card"
                     href="https://youtu.be/ymzibUhKkE4?si=C0mCSUl8MO1FzB34"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="card"
                 >
 
-                    <div>
-
-                        <div class="card-icon">
-                            🔥
-                        </div>
-
-                        <h3>
-                            لحظات خفن
-                        </h3>
-
-                        <p>
-                            بهترین و خفن‌ترین لحظات گیمینگ
-                        </p>
-
+                    <div class="card-icon">
+                        🔥
                     </div>
+
+                    <h3>
+                        لحظات خفن
+                    </h3>
+
+                    <p>
+                        بهترین و خفن‌ترین لحظات گیمینگ
+                    </p>
 
                     <span class="card-link">
                         مشاهده ویدیو ←
@@ -1141,27 +176,23 @@
                 <!-- گیم پلی -->
 
                 <a
-                    class="card"
                     href="https://youtu.be/ZvK0fPXgnA0?si=2Nr8scO9JaI3WJju"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="card"
                 >
 
-                    <div>
-
-                        <div class="card-icon">
-                            🎮
-                        </div>
-
-                        <h3>
-                            گیم پلی فری فایر
-                        </h3>
-
-                        <p>
-                            گیم پلی‌های فری فایر و لحظات جذاب
-                        </p>
-
+                    <div class="card-icon">
+                        🎮
                     </div>
+
+                    <h3>
+                        گیم پلی فری فایر
+                    </h3>
+
+                    <p>
+                        گیم پلی‌های فری فایر و لحظات جذاب
+                    </p>
 
                     <span class="card-link">
                         مشاهده ویدیو ←
@@ -1176,7 +207,7 @@
 
         <!-- =========================
              LATEST VIDEO
-        ========================= -->
+        ========================== -->
 
         <section class="reveal">
 
@@ -1193,7 +224,6 @@
 
                 <div class="latest-video-content">
 
-
                     <div class="latest-video-text">
 
                         <h3>
@@ -1207,16 +237,15 @@
 
 
                         <a
-                            class="watch-btn"
                             href="https://youtu.be/-hc_wSXc2Sk?si=VLOI0fYwtVrCt7RX"
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="watch-btn"
                         >
                             ▶ تماشای ویدیو
                         </a>
 
                     </div>
-
 
                     <div class="video-icon">
                         ▶️
@@ -1231,7 +260,7 @@
 
         <!-- =========================
              VIDEOS UNDER CONSTRUCTION
-        ========================= -->
+        ========================== -->
 
         <section class="reveal">
 
@@ -1253,7 +282,7 @@
 
                 <!-- MACRO ICE -->
 
-                <article class="construction-card">
+                <div class="construction-card">
 
                     <img
                         src="images/macro-ice.png"
@@ -1274,12 +303,12 @@
 
                     </div>
 
-                </article>
+                </div>
 
 
                 <!-- NEW SENS -->
 
-                <article class="construction-card">
+                <div class="construction-card">
 
                     <img
                         src="images/sens-new.png"
@@ -1299,12 +328,12 @@
 
                     </div>
 
-                </article>
+                </div>
 
 
                 <!-- BIG SMOKE -->
 
-                <article class="construction-card">
+                <div class="construction-card">
 
                     <img
                         src="images/big-smoke.png"
@@ -1324,8 +353,7 @@
 
                     </div>
 
-                </article>
-
+                </div>
 
             </div>
 
@@ -1333,10 +361,10 @@
 
 
         <!-- =========================
-             HEADSHOT FILE
-        ========================= -->
+             HEADSHOT SETTINGS
+        ========================== -->
 
-        <section class="headshot-section reveal">
+        <section class="reveal">
 
             <div class="section-title">
 
@@ -1345,13 +373,13 @@
                 </h2>
 
                 <p>
-                    فایل تنظیمات هدشات را دریافت کن
+                    فایل تنظیمات هدشات را دریافت کنید
                 </p>
 
             </div>
 
 
-            <div class="headshot-card">
+            <div class="headshot-box">
 
                 <div class="headshot-icon">
                     🎯
@@ -1362,24 +390,24 @@
                 </h3>
 
                 <p>
-                    برای دریافت فایل روی دکمه دانلود کلیک کن.
+                    برای دریافت فایل روی دکمه زیر کلیک کنید.
                 </p>
 
 
                 <!--
-                    فایل واقعی در GitHub:
-
+                    فایل داخل GitHub:
                     File/headshot-settings.rar
+
+                    لینک اصلاح‌شده:
+                    raw.githubusercontent.com
                 -->
 
                 <a
+                    href="https://raw.githubusercontent.com/prhammwyd47-a11y/Prm_Zero/main/File/headshot-settings.rar"
                     class="download-btn"
-                    href="https://prhammwyd47-a11y.github.io/Prm_Zero/File/headshot-settings.rar"
-                    download
+                    download="headshot-settings.rar"
                 >
-
                     ⬇️ دانلود فایل
-
                 </a>
 
             </div>
@@ -1389,7 +417,7 @@
 
         <!-- =========================
              TELEGRAM
-        ========================= -->
+        ========================== -->
 
         <section class="reveal">
 
@@ -1399,10 +427,14 @@
                     📱 کانال تلگرامی ما
                 </h2>
 
+                <p>
+                    برای دریافت فایل‌ها و اطلاعیه‌های جدید عضو شوید
+                </p>
+
             </div>
 
 
-            <div class="telegram-card">
+            <div class="telegram-box">
 
                 <div class="telegram-icon">
                     📱
@@ -1413,16 +445,14 @@
                 </h3>
 
                 <p>
-                    برای دریافت اخبار، فایل‌ها و اطلاعیه‌های جدید
-                    به کانال تلگرام ما بپیوند.
+                    فایل‌ها، اخبار و اطلاعیه‌های جدید
                 </p>
 
-
                 <a
-                    class="telegram-btn"
                     href="https://t.me/Prm_Zero"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="telegram-btn"
                 >
                     🚀 ورود به کانال تلگرام
                 </a>
@@ -1434,7 +464,7 @@
 
         <!-- =========================
              YOUTUBE
-        ========================= -->
+        ========================== -->
 
         <section class="reveal">
 
@@ -1445,19 +475,19 @@
                 </h2>
 
                 <p>
-                    برای دیدن تمام ویدیوها وارد کانال شو
+                    تمام ویدیوهای کانال را ببین
                 </p>
 
             </div>
 
 
-            <div style="text-align:center;">
+            <div class="youtube-button-area">
 
                 <a
-                    class="btn btn-primary"
                     href="https://www.youtube.com/@Prm_Zero7"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="btn primary"
                 >
                     🔥 ورود به کانال یوتیوب
                 </a>
@@ -1466,13 +496,12 @@
 
         </section>
 
-
     </main>
 
 
     <!-- =========================
          FOOTER
-    ========================= -->
+    ========================== -->
 
     <footer>
 
@@ -1481,7 +510,7 @@
             <strong>Prm_Zero</strong>
         </p>
 
-        <p style="margin-top:10px;">
+        <p>
             © 2026 Prm_Zero
         </p>
 
@@ -1490,66 +519,52 @@
 
     <!-- =========================
          JAVASCRIPT
-    ========================= -->
+    ========================== -->
 
     <script>
 
-        /*
-         * لودینگ مستقل از عکس‌هاست.
-         * بنابراین اگر عکس‌ها دیر لود شوند،
-         * صفحه بیشتر از 3 ثانیه منتظر نمی‌ماند.
-         */
+        /* =========================
+           LOADING
+        ========================== */
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+        window.addEventListener("load", function () {
 
-                setTimeout(function () {
+            setTimeout(function () {
 
-                    const loader =
-                        document.getElementById("loader");
+                const loader =
+                    document.getElementById("loader");
 
-                    loader.classList.add("hide");
+                loader.classList.add("hide");
 
-                }, 3000);
+            }, 3000);
 
-            }
-        );
+        });
 
 
-        /*
-         * انیمیشن ظاهر شدن بخش‌ها هنگام اسکرول
-         */
+        /* =========================
+           SCROLL ANIMATION
+        ========================== */
 
         const revealElements =
             document.querySelectorAll(".reveal");
 
 
-        const revealObserver =
+        const observer =
             new IntersectionObserver(
 
                 function (entries) {
 
-                    entries.forEach(
-                        function (entry) {
+                    entries.forEach(function (entry) {
 
-                            if (
-                                entry.isIntersecting
-                            ) {
+                        if (entry.isIntersecting) {
 
-                                entry.target
-                                    .classList
-                                    .add("show");
+                            entry.target.classList.add("show");
 
-                                revealObserver
-                                    .unobserve(
-                                        entry.target
-                                    );
-
-                            }
+                            observer.unobserve(entry.target);
 
                         }
-                    );
+
+                    });
 
                 },
 
@@ -1560,18 +575,16 @@
             );
 
 
-        revealElements.forEach(
-            function (element) {
+        revealElements.forEach(function (element) {
 
-                revealObserver.observe(element);
+            observer.observe(element);
 
-            }
-        );
+        });
 
 
-        /*
-         * حرکت نورهای نئونی با موس
-         */
+        /* =========================
+           MOUSE NEON EFFECT
+        ========================== */
 
         document.addEventListener(
             "mousemove",
@@ -1586,35 +599,25 @@
                     window.innerHeight;
 
 
-                const lightOne =
-                    document.querySelector(
-                        ".light.one"
-                    );
+                const light1 =
+                    document.querySelector(".light-1");
 
-                const lightTwo =
-                    document.querySelector(
-                        ".light.two"
-                    );
+                const light2 =
+                    document.querySelector(".light-2");
 
 
-                if (lightOne) {
+                if (light1) {
 
-                    lightOne.style.transform =
-                        `translate(
-                            ${x * 50}px,
-                            ${y * 30}px
-                        )`;
+                    light1.style.transform =
+                        `translate(${x * 40}px, ${y * 30}px)`;
 
                 }
 
 
-                if (lightTwo) {
+                if (light2) {
 
-                    lightTwo.style.transform =
-                        `translate(
-                            ${-x * 50}px,
-                            ${y * 40}px
-                        )`;
+                    light2.style.transform =
+                        `translate(${-x * 40}px, ${y * 30}px)`;
 
                 }
 
